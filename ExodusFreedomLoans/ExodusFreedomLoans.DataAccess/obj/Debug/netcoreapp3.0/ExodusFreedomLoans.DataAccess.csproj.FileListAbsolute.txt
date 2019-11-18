@@ -1,0 +1,13 @@
+C:\Users\Riley's PC\Documents\GitHub\ExodusFreedomLoans\ExodusFreedomLoans\ExodusFreedomLoans.DataAccess\bin\Debug\netcoreapp3.0\ExodusFreedomLoans.DataAccess.deps.json
+C:\Users\Riley's PC\Documents\GitHub\ExodusFreedomLoans\ExodusFreedomLoans\ExodusFreedomLoans.DataAccess\bin\Debug\netcoreapp3.0\ExodusFreedomLoans.DataAccess.dll
+C:\Users\Riley's PC\Documents\GitHub\ExodusFreedomLoans\ExodusFreedomLoans\ExodusFreedomLoans.DataAccess\bin\Debug\netcoreapp3.0\ExodusFreedomLoans.DataAccess.pdb
+C:\Users\Riley's PC\Documents\GitHub\ExodusFreedomLoans\ExodusFreedomLoans\ExodusFreedomLoans.DataAccess\obj\Debug\netcoreapp3.0\ExodusFreedomLoans.DataAccess.csprojAssemblyReference.cache
+C:\Users\Riley's PC\Documents\GitHub\ExodusFreedomLoans\ExodusFreedomLoans\ExodusFreedomLoans.DataAccess\obj\Debug\netcoreapp3.0\ExodusFreedomLoans.DataAccess.AssemblyInfoInputs.cache
+C:\Users\Riley's PC\Documents\GitHub\ExodusFreedomLoans\ExodusFreedomLoans\ExodusFreedomLoans.DataAccess\obj\Debug\netcoreapp3.0\ExodusFreedomLoans.DataAccess.AssemblyInfo.cs
+C:\Users\Riley's PC\Documents\GitHub\ExodusFreedomLoans\ExodusFreedomLoans\ExodusFreedomLoans.DataAccess\obj\Debug\netcoreapp3.0\ExodusFreedomLoans.DataAccess.dll
+C:\Users\Riley's PC\Documents\GitHub\ExodusFreedomLoans\ExodusFreedomLoans\ExodusFreedomLoans.DataAccess\obj\Debug\netcoreapp3.0\ExodusFreedomLoans.DataAccess.pdb
+C:\Users\Riley's PC\Documents\GitHub\ExodusFreedomLoans\ExodusFreedomLoans\ExodusFreedomLoans.DataAccess\bin\Debug\netcoreapp3.0\ExodusFreedomLoans.Models.dll
+C:\Users\Riley's PC\Documents\GitHub\ExodusFreedomLoans\ExodusFreedomLoans\ExodusFreedomLoans.DataAccess\bin\Debug\netcoreapp3.0\ExodusFreedomLoans.Utility.dll
+C:\Users\Riley's PC\Documents\GitHub\ExodusFreedomLoans\ExodusFreedomLoans\ExodusFreedomLoans.DataAccess\bin\Debug\netcoreapp3.0\ExodusFreedomLoans.Models.pdb
+C:\Users\Riley's PC\Documents\GitHub\ExodusFreedomLoans\ExodusFreedomLoans\ExodusFreedomLoans.DataAccess\bin\Debug\netcoreapp3.0\ExodusFreedomLoans.Utility.pdb
+C:\Users\Riley's PC\Documents\GitHub\ExodusFreedomLoans\ExodusFreedomLoans\ExodusFreedomLoans.DataAccess\obj\Debug\netcoreapp3.0\ExodusFreedomLoans.DataAccess.csproj.CopyComplete

@@ -1,0 +1,8 @@
+C:\Users\Riley's PC\Documents\GitHub\ExodusFreedomLoans\ExodusFreedomLoans\ExodusFreedomLoans.Utility\bin\Debug\netcoreapp3.0\ExodusFreedomLoans.Utility.deps.json
+C:\Users\Riley's PC\Documents\GitHub\ExodusFreedomLoans\ExodusFreedomLoans\ExodusFreedomLoans.Utility\bin\Debug\netcoreapp3.0\ExodusFreedomLoans.Utility.dll
+C:\Users\Riley's PC\Documents\GitHub\ExodusFreedomLoans\ExodusFreedomLoans\ExodusFreedomLoans.Utility\bin\Debug\netcoreapp3.0\ExodusFreedomLoans.Utility.pdb
+C:\Users\Riley's PC\Documents\GitHub\ExodusFreedomLoans\ExodusFreedomLoans\ExodusFreedomLoans.Utility\obj\Debug\netcoreapp3.0\ExodusFreedomLoans.Utility.csprojAssemblyReference.cache
+C:\Users\Riley's PC\Documents\GitHub\ExodusFreedomLoans\ExodusFreedomLoans\ExodusFreedomLoans.Utility\obj\Debug\netcoreapp3.0\ExodusFreedomLoans.Utility.AssemblyInfoInputs.cache
+C:\Users\Riley's PC\Documents\GitHub\ExodusFreedomLoans\ExodusFreedomLoans\ExodusFreedomLoans.Utility\obj\Debug\netcoreapp3.0\ExodusFreedomLoans.Utility.AssemblyInfo.cs
+C:\Users\Riley's PC\Documents\GitHub\ExodusFreedomLoans\ExodusFreedomLoans\ExodusFreedomLoans.Utility\obj\Debug\netcoreapp3.0\ExodusFreedomLoans.Utility.dll
+C:\Users\Riley's PC\Documents\GitHub\ExodusFreedomLoans\ExodusFreedomLoans\ExodusFreedomLoans.Utility\obj\Debug\netcoreapp3.0\ExodusFreedomLoans.Utility.pdb

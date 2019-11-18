@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29319.158
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExodusFreedomLoans", "ExodusFreedomLoans\ExodusFreedomLoans.csproj", "{89600E4D-1FD9-43AB-AA18-691C424586CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExodusFreedomLoans", "ExodusFreedomLoans\ExodusFreedomLoans.csproj", "{89600E4D-1FD9-43AB-AA18-691C424586CF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExodusFreedomLoans.DataAccess", "ExodusFreedomLoans.DataAccess\ExodusFreedomLoans.DataAccess.csproj", "{F12DC4A2-B302-4E30-A044-EE7477F9AB98}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExodusFreedomLoans.Models", "ExodusFreedomLoans.Models\ExodusFreedomLoans.Models.csproj", "{F5B7B1DD-0077-4761-82E2-CDE953854861}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExodusFreedomLoans.Utility", "ExodusFreedomLoans.Utility\ExodusFreedomLoans.Utility.csproj", "{4F3E7788-ED9D-4362-8733-7469A0E411D0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{89600E4D-1FD9-43AB-AA18-691C424586CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89600E4D-1FD9-43AB-AA18-691C424586CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{89600E4D-1FD9-43AB-AA18-691C424586CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F12DC4A2-B302-4E30-A044-EE7477F9AB98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F12DC4A2-B302-4E30-A044-EE7477F9AB98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F12DC4A2-B302-4E30-A044-EE7477F9AB98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F12DC4A2-B302-4E30-A044-EE7477F9AB98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5B7B1DD-0077-4761-82E2-CDE953854861}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5B7B1DD-0077-4761-82E2-CDE953854861}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5B7B1DD-0077-4761-82E2-CDE953854861}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5B7B1DD-0077-4761-82E2-CDE953854861}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F3E7788-ED9D-4362-8733-7469A0E411D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F3E7788-ED9D-4362-8733-7469A0E411D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F3E7788-ED9D-4362-8733-7469A0E411D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F3E7788-ED9D-4362-8733-7469A0E411D0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
