@@ -131,5 +131,7 @@ namespace ExodusFreedomLoans.Models
         [Display(Name = "Expense Foreign Key")]
         public int ExpenseForeignKey { get; set; }*/
 
+         public Loan[] ListOfLoans { get; set; }
+
     }
 }
