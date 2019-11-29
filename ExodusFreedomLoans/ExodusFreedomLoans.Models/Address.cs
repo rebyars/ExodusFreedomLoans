@@ -1,12 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace ExodusFreedomLoans.Models
 {
-    class Address
+    public class Address
     {
+        [Key]
+        public int AddressId { get; set; }
+
         [Required]
         [Display(Name= ("Street Address"))]
         public string StreetAddress { get; set; }

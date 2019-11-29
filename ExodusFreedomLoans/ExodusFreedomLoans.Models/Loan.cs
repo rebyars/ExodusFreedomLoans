@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace ExodusFreedomLoans.Models
 {
-    class Loan
+    public class Loan
     {
         [Key]
         public int LoanKey { get; set; }
@@ -33,5 +34,9 @@ namespace ExodusFreedomLoans.Models
         [Required]
         [Display(Name = "Interest Rate")]
         public float InterestRate { get; set; }
+
+        [Required]
+        [ForeignKey("ApplicantKey")]
+        public int ApplicantKey { get; set; }
     }
 }

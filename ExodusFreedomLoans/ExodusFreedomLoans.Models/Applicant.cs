@@ -6,7 +6,7 @@ using System.Text;
 
 namespace ExodusFreedomLoans.Models
 {
-    class Applicant
+    public class Applicant
     {
         [Key]
         public int ApplicantKey { get; set; }
@@ -29,12 +29,14 @@ namespace ExodusFreedomLoans.Models
         [Display(Name = "Applicant Phone Number")]
         public string ApplicantPhone { get; set; }
 
-        [Required]
+        
         [Display(Name = "Applicant Address")]
+        [ForeignKey("AddressForeignKey")]
         public Address ApplicantAddress { get; set; }
 
 
         [Display(Name = "Applicant Previous Address")]
+        [ForeignKey("PrevAddressForeignKey")]
         public Address PreviousAddress { get; set; }
 
 
@@ -43,6 +45,7 @@ namespace ExodusFreedomLoans.Models
 
 
         [Display(Name = "Current Employer Address")]
+        [ForeignKey("EmployerAddressForeignKey")]
         public Address EmployerAddress { get; set; }
 
 
@@ -76,6 +79,7 @@ namespace ExodusFreedomLoans.Models
 
 
         [Display(Name = "Previous Employer Address")]
+        [ForeignKey("PreviousAddressForeignKey")]
         public Address PrevEmployerAddress { get; set; }
 
 
@@ -108,8 +112,9 @@ namespace ExodusFreedomLoans.Models
         [Display(Name = "Nearest Relative Name")]
         public string NearestRelativeName { get; set; }
 
-        [Required]
+        
         [Display(Name = "Nearest Relative Address")]
+        [ForeignKey("NearestRelativeAddressForeignKey")]
         public Address NearestRelativeAddress { get; set; }
 
         [Required]
@@ -121,17 +126,27 @@ namespace ExodusFreedomLoans.Models
         [Display(Name = "Nearest Relative Relation to Applicant")]
         public string NearestRelativeRelation { get; set; }
 
-        /*[ForeignKey]
+        private Loan[] listOfLoans;
+
+        [ForeignKey("CoApplicantForeignKey")]
         [Display(Name ="Co-applicant Key")]
-        public int CoApplicantKey { get; set; }
-        */
+        public Applicant CoApplicant { get; set; }
+        
 
-        /*[Required]
-        [ForeignKey]
+        
+        [ForeignKey("ExpenseSheetForeignKey")]
         [Display(Name = "Expense Foreign Key")]
-        public int ExpenseForeignKey { get; set; }*/
+        public int ExpenseForeignKey { get; set; }
 
-         public Loan[] ListOfLoans { get; set; }
+        public Loan[] GetListOfLoans()
+        {
+            return listOfLoans;
+        }
 
+
+        public void SetListOfLoans(Loan[] value)
+        {
+            listOfLoans = value;
+        }
     }
 }
