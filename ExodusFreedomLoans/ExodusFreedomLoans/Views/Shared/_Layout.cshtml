@@ -27,14 +27,22 @@
                     <li class="nav-item active">
                         <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                    </li>
-                </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <partial name="_LoginPartial" />
-                </form>
-            </div>
+                     <li> <!-- class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropDown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Applicant Management
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropDown"> -->
+                                    <a class="nav-link" asp-area="Partner" asp-controller="Applicant" asp-action="Index">New Applicant</a>
+                               <!--  </div> -->
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            </li>
+                        </ul>
+                        <form class="form-inline my-2 my-lg-0">
+                            <partial name="_LoginPartial" />
+                        </form>
+</div>
         </nav>
     </header>
 
