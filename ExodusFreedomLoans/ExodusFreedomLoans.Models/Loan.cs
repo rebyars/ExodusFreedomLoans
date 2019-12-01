@@ -35,7 +35,7 @@ namespace ExodusFreedomLoans.Models
         [Display(Name = "Interest Rate")]
         public float InterestRate { get; set; }
 
-        [Required]
+        
         [ForeignKey("ApplicantKey")]
         public int ApplicantKey { get; set; }
     }

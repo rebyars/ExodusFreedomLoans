@@ -29,7 +29,7 @@ namespace ExodusFreedomLoans.Models
         [Display(Name = "Applicant Phone Number")]
         public string ApplicantPhone { get; set; }
 
-        
+
         [Display(Name = "Applicant Address")]
         [ForeignKey("AddressForeignKey")]
         public Address ApplicantAddress { get; set; }
@@ -58,7 +58,7 @@ namespace ExodusFreedomLoans.Models
         [Display(Name = "Employer Phone Number")]
         public string EmployerPhone { get; set; }
 
-    
+
         [Display(Name = "Time with employer: ")]
         public int EmployerTenure { get; set; }
 
@@ -66,11 +66,11 @@ namespace ExodusFreedomLoans.Models
         [Display(Name = "Applicant Position")]
         public string ApplicantPosition { get; set; }
 
-   
+
         [Display(Name = "Pay Structure")]
         public bool ApplicantPayStructure { get; set; }
 
-       
+
         [Display(Name = "Monthly Income")]
         public string ApplicantMonthlyIncome { get; set; }
 
@@ -112,7 +112,7 @@ namespace ExodusFreedomLoans.Models
         [Display(Name = "Nearest Relative Name")]
         public string NearestRelativeName { get; set; }
 
-        
+
         [Display(Name = "Nearest Relative Address")]
         [ForeignKey("NearestRelativeAddressForeignKey")]
         public Address NearestRelativeAddress { get; set; }
@@ -129,11 +129,11 @@ namespace ExodusFreedomLoans.Models
         private Loan[] listOfLoans;
 
         [ForeignKey("CoApplicantForeignKey")]
-        [Display(Name ="Co-applicant Key")]
+        [Display(Name = "Co-applicant Key")]
         public Applicant CoApplicant { get; set; }
-        
 
-        
+
+
         [ForeignKey("ExpenseSheetForeignKey")]
         [Display(Name = "Expense Foreign Key")]
         public int ExpenseForeignKey { get; set; }

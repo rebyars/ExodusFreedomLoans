@@ -12,7 +12,7 @@ namespace ExodusFreedomLoans.Models
         public int AddressId { get; set; }
 
         [Required]
-        [Display(Name= ("Street Address"))]
+        [Display(Name = ("Street Address"))]
         public string StreetAddress { get; set; }
 
         [Required]
