@@ -5,7 +5,7 @@
 }
 
 <!-- Need Title to show-->
-
+<!-- Add sections to application-->
 <form method="post" asp-action="Upsert">
 
     <div class="row px-2 mx-2 backgroundWhite border">
@@ -41,8 +41,185 @@
             </div>
         </div>
         <div class="form-group row">
+            <div class="col-4">
+                <label asp-for="ApplicantEmail"></label>
+            </div>
+            <div class="col-8">
+                <input asp-for="ApplicantEmail" class="form-control" />
+                <span asp-validation-for="ApplicantEmail" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-4">
+                <label asp-for="ApplicantDOB"></label>
+            </div>
+            <div class="col-8">
+                <input asp-for="ApplicantDOB" class="form-control" />
+                <span asp-validation-for="ApplicantDOB" class="text-danger"></span>
+            </div>
+        </div>
+        <!-- Figure out Address-->
+        <!-- Previous Address-->
+
+        <div class="form-group row">
+            <div class="col-4">
+                <label asp-for="EmployerName"></label>
+            </div>
+            <div class="col-8">
+                <input asp-for="EmployerName" class="form-control" />
+                <span asp-validation-for="EmployerName" class="text-danger"></span>
+            </div>
+        </div>
+
+        <!-- Employer Address-->
+
+        <div class="form-group row">
+            <div class="col-4">
+                <label asp-for="EmployerEmail"></label>
+            </div>
+            <div class="col-8">
+                <input asp-for="EmployerEmail" class="form-control" />
+                <span asp-validation-for="EmployerEmail" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-4">
+                <label asp-for="EmployerPhone"></label>
+            </div>
+            <div class="col-8">
+                <input asp-for="EmployerPhone" class="form-control" />
+                <span asp-validation-for="EmployerPhone" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-4">
+                <label asp-for="EmployerTenure"></label>
+            </div>
+            <div class="col-8">
+                <input asp-for="EmployerTenure" class="form-control" />
+                <span asp-validation-for="EmployerTenure" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-4">
+                <label asp-for="ApplicantPosition"></label>
+            </div>
+            <div class="col-8">
+                <input asp-for="ApplicantPosition" class="form-control" />
+                <span asp-validation-for="ApplicantPosition" class="text-danger"></span>
+            </div>
+        </div>
+
+        <!-- Turn into hourly / salary-->
+        <div class="form-group row">
+            <div class="col-4">
+                <label asp-for="ApplicantPayStructure"></label>
+            </div>
+            <div class="col-8">
+                <input asp-for="ApplicantPayStructure" class="form-control" />
+                <span asp-validation-for="ApplicantPayStructure" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-4">
+                <label asp-for="ApplicantMonthlyIncome"></label>
+            </div>
+            <div class="col-8">
+                <input asp-for="ApplicantMonthlyIncome" class="form-control" />
+                <span asp-validation-for="ApplicantMonthlyIncome" class="text-danger"></span>
+            </div>
+        </div>
+
+        <!--INSERT Prev Employer Address-->
+
+        <div class="form-group row">
+            <div class="col-4">
+                <label asp-for="PrevEmployerEmail"></label>
+            </div>
+            <div class="col-8">
+                <input asp-for="PrevEmployerEmail" class="form-control" />
+                <span asp-validation-for="PrevEmployerEmail" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-4">
+                <label asp-for="PrevEmployerPhone"></label>
+            </div>
+            <div class="col-8">
+                <input asp-for="PrevEmployerPhone" class="form-control" />
+                <span asp-validation-for="PrevEmployerPhone" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-4">
+                <label asp-for="PrevEmployerTenure"></label>
+            </div>
+            <div class="col-8">
+                <input asp-for="PrevEmployerTenure" class="form-control" />
+                <span asp-validation-for="PrevEmployerTenure" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-4">
+                <label asp-for="PrevApplicantPosition"></label>
+            </div>
+            <div class="col-8">
+                <input asp-for="PrevApplicantPosition" class="form-control" />
+                <span asp-validation-for="PrevApplicantPosition" class="text-danger"></span>
+            </div>
+        </div>
+
+        <!-- INSERT Prev Turn into hourly / salary-->
+        <div class="form-group row">
+            <div class="col-4">
+                <label asp-for="PrevApplicantPayStructure"></label>
+            </div>
+            <div class="col-8">
+                <input asp-for="PrevApplicantPayStructure" class="form-control" />
+                <span asp-validation-for="PrevApplicantPayStructure" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-4">
+                <label asp-for="PrevApplicantMonthlyIncome"></label>
+            </div>
+            <div class="col-8">
+                <input asp-for="PrevApplicantMonthlyIncome" class="form-control" />
+                <span asp-validation-for="PrevApplicantMonthlyIncome" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-4">
+                <label asp-for="NearestRelativeName"></label>
+            </div>
+            <div class="col-8">
+                <input asp-for="NearestRelativeName" class="form-control" />
+                <span asp-validation-for="NearestRelativeName" class="text-danger"></span>
+            </div>
+        </div>
+
+        <!-- Nearest Relative Address-->
+
+        <div class="form-group row">
+            <div class="col-4">
+                <label asp-for="NearestRelativeRelation"></label>
+            </div>
+            <div class="col-8">
+                <input asp-for="NearestRelativeRelation" class="form-control" />
+                <span asp-validation-for="NearestRelativeRelation" class="text-danger"></span>
+            </div>
+        </div>
+
+        <!-- Co-applicant functionality-->
+
+        <!-- List of Loans-->
+
+        <!-- Expense Sheet how to-->
+
+
+        <div class="form-group row">
             <div class="col-8 offset-4">
-                @if(Model.ApplicantKey != 0)
+                @if (Model.ApplicantKey != 0)
                 {
                     //Edit button and back to list
                     <partial name="_EditAndBackToList" model="Model.ApplicantKey" />

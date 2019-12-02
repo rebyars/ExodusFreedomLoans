@@ -40,7 +40,7 @@ namespace ExodusFreedomLoans.Models
         public Address PreviousAddress { get; set; }
 
 
-        [Display(Name = "Current Employer")]
+        [Display(Name = "Current Employer Name")]
         public string EmployerName { get; set; }
 
 
@@ -63,7 +63,7 @@ namespace ExodusFreedomLoans.Models
         public int EmployerTenure { get; set; }
 
 
-        [Display(Name = "Applicant Position")]
+        [Display(Name = "Applicant Position/Role")]
         public string ApplicantPosition { get; set; }
 
 
@@ -97,7 +97,7 @@ namespace ExodusFreedomLoans.Models
         public int PrevEmployerTenure { get; set; }
 
 
-        [Display(Name = "Applicant Previous Position")]
+        [Display(Name = "Applicant Previous Position/Role")]
         public string PrevApplicantPosition { get; set; }
 
 
@@ -124,7 +124,7 @@ namespace ExodusFreedomLoans.Models
 
         [Required]
         [Display(Name = "Nearest Relative Relation to Applicant")]
-        public string NearestRelativeRelation { get; set; }
+        public string NearestRelativeRelation{ get; set; }
 
         private Loan[] listOfLoans;
 
