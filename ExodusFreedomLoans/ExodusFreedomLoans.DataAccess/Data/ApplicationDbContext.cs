@@ -16,8 +16,6 @@ namespace ExodusFreedomLoans.DataAccess.Data
 
         public DbSet<Applicant> Applicant { get; set; }
 
-        public DbSet<Address> Address { get; set; }
-
         public DbSet<ExpenseReport> ExpenseReport { get; set; }
     }
 }
