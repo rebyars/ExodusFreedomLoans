@@ -132,7 +132,9 @@ namespace ExodusFreedomLoans.Models
         [Display(Name = "Co-applicant Key")]
         public Applicant CoApplicant { get; set; }
 
+        /* insert partner key */
 
+        
 
         [ForeignKey("ExpenseSheetForeignKey")]
         [Display(Name = "Expense Foreign Key")]
