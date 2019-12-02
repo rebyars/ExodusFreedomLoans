@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ExodusFreedomLoans.Models
 {
-    class ExpenseReport
+    public class ExpenseReport
     {
         [Key]
         public int ExpenseReportKey { get; set; }

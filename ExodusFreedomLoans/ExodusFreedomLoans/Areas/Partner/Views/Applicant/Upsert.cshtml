@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<!-- Need Title to show-->
+
 <!-- Add sections to application-->
 <form method="post" asp-action="Upsert">
 
@@ -15,6 +15,10 @@
             <input type="hidden" asp-for="ApplicantKey" />
             title = "Edit Applicant";
         }
+    </div>
+
+    <div class="col-12">
+        <h2 class="text-primary">@title</h2>
     </div>
 
     <div class="col-12">

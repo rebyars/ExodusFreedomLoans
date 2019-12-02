@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ExodusFreedomLoans.DataAccess.Migrations
 {
-    public partial class Initial : Migration
+    public partial class NewMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -64,79 +64,58 @@ namespace ExodusFreedomLoans.DataAccess.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Applicant",
+                name: "ExpenseReport",
                 columns: table => new
                 {
-                    ApplicantKey = table.Column<int>(nullable: false)
+                    ExpenseReportKey = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    ApplicantName = table.Column<string>(nullable: false),
-                    ApplicantEmail = table.Column<string>(nullable: false),
-                    ApplicantDOB = table.Column<string>(nullable: false),
-                    ApplicantPhone = table.Column<string>(nullable: false),
-                    AddressForeignKey = table.Column<int>(nullable: true),
-                    PrevAddressForeignKey = table.Column<int>(nullable: true),
-                    EmployerName = table.Column<string>(nullable: true),
-                    EmployerAddressForeignKey = table.Column<int>(nullable: true),
-                    EmployerEmail = table.Column<string>(nullable: true),
-                    EmployerPhone = table.Column<string>(nullable: true),
-                    EmployerTenure = table.Column<int>(nullable: false),
-                    ApplicantPosition = table.Column<string>(nullable: true),
-                    ApplicantPayStructure = table.Column<bool>(nullable: false),
-                    ApplicantMonthlyIncome = table.Column<string>(nullable: true),
-                    PrevEmployerName = table.Column<string>(nullable: true),
-                    PreviousAddressForeignKey = table.Column<int>(nullable: true),
-                    PrevEmployerEmail = table.Column<string>(nullable: true),
-                    PrevEmployerPhone = table.Column<string>(nullable: true),
-                    PrevEmployerTenure = table.Column<int>(nullable: false),
-                    PrevApplicantPosition = table.Column<string>(nullable: true),
-                    PrevApplicantPayStructure = table.Column<bool>(nullable: false),
-                    PrevApplicantMonthlyIncome = table.Column<string>(nullable: true),
-                    NearestRelativeName = table.Column<string>(nullable: false),
-                    NearestRelativeAddressForeignKey = table.Column<int>(nullable: true),
-                    NearestRelativePhone = table.Column<string>(nullable: false),
-                    NearestRelativeRelation = table.Column<string>(nullable: false),
-                    CoApplicantForeignKey = table.Column<int>(nullable: true),
-                    ExpenseForeignKey = table.Column<int>(nullable: false)
+                    FullTimeIncome = table.Column<int>(nullable: false),
+                    PartTimeIncome = table.Column<int>(nullable: false),
+                    SelfEmploymentIncome = table.Column<int>(nullable: false),
+                    OtherMonthlyIncome = table.Column<int>(nullable: false),
+                    RetirementIncome = table.Column<int>(nullable: false),
+                    SSAIncome = table.Column<int>(nullable: false),
+                    IRAIncome = table.Column<int>(nullable: false),
+                    InheritanceIncome = table.Column<int>(nullable: false),
+                    TANFIncome = table.Column<int>(nullable: false),
+                    SNAPIncome = table.Column<int>(nullable: false),
+                    PublicHousingIncome = table.Column<int>(nullable: false),
+                    SSDisabilityIncome = table.Column<int>(nullable: false),
+                    OtherAssistanceIncome = table.Column<int>(nullable: false),
+                    AlimonyIncome = table.Column<int>(nullable: false),
+                    ChildSupportIncome = table.Column<int>(nullable: false),
+                    OtherSupportIncome = table.Column<int>(nullable: false),
+                    MortgageExpense = table.Column<int>(nullable: false),
+                    TechnologyExpense = table.Column<int>(nullable: false),
+                    ElecGasExpense = table.Column<int>(nullable: false),
+                    WaterBillExpense = table.Column<int>(nullable: false),
+                    CableExpense = table.Column<int>(nullable: false),
+                    MaintenanceExpense = table.Column<int>(nullable: false),
+                    OtherHousingExpense = table.Column<int>(nullable: false),
+                    CarExpense = table.Column<int>(nullable: false),
+                    AltTransportationExpense = table.Column<int>(nullable: false),
+                    FuelExpense = table.Column<int>(nullable: false),
+                    VehichleMaintenanceExpense = table.Column<int>(nullable: false),
+                    OtherTransportationExpense = table.Column<int>(nullable: false),
+                    HomeInsuranceExpense = table.Column<int>(nullable: false),
+                    VehicleInsuranceExpense = table.Column<int>(nullable: false),
+                    HealthInsuranceExpense = table.Column<int>(nullable: false),
+                    LifeInsuranceExpense = table.Column<int>(nullable: false),
+                    LongTermCareExpense = table.Column<int>(nullable: false),
+                    OtherInsuranceExpense = table.Column<int>(nullable: false),
+                    PetExpense = table.Column<int>(nullable: false),
+                    DoctorExpense = table.Column<int>(nullable: false),
+                    PerscriptionExpense = table.Column<int>(nullable: false),
+                    MedicalCareExpense = table.Column<int>(nullable: false),
+                    PersonalCareExpense = table.Column<int>(nullable: false),
+                    ChargeAccountsExpense = table.Column<int>(nullable: false),
+                    LoanExpense = table.Column<int>(nullable: false),
+                    DebtHighExpense = table.Column<int>(nullable: false),
+                    AlimonyChildSupportExpense = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Applicant", x => x.ApplicantKey);
-                    table.ForeignKey(
-                        name: "FK_Applicant_Address_AddressForeignKey",
-                        column: x => x.AddressForeignKey,
-                        principalTable: "Address",
-                        principalColumn: "AddressId",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_Applicant_Applicant_CoApplicantForeignKey",
-                        column: x => x.CoApplicantForeignKey,
-                        principalTable: "Applicant",
-                        principalColumn: "ApplicantKey",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_Applicant_Address_EmployerAddressForeignKey",
-                        column: x => x.EmployerAddressForeignKey,
-                        principalTable: "Address",
-                        principalColumn: "AddressId",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_Applicant_Address_NearestRelativeAddressForeignKey",
-                        column: x => x.NearestRelativeAddressForeignKey,
-                        principalTable: "Address",
-                        principalColumn: "AddressId",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_Applicant_Address_PrevAddressForeignKey",
-                        column: x => x.PrevAddressForeignKey,
-                        principalTable: "Address",
-                        principalColumn: "AddressId",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_Applicant_Address_PreviousAddressForeignKey",
-                        column: x => x.PreviousAddressForeignKey,
-                        principalTable: "Address",
-                        principalColumn: "AddressId",
-                        onDelete: ReferentialAction.Restrict);
+                    table.PrimaryKey("PK_ExpenseReport", x => x.ExpenseReportKey);
                 });
 
             migrationBuilder.CreateTable(
@@ -185,8 +164,8 @@ namespace ExodusFreedomLoans.DataAccess.Migrations
                 name: "AspNetUserLogins",
                 columns: table => new
                 {
-                    LoginProvider = table.Column<string>(maxLength: 128, nullable: false),
-                    ProviderKey = table.Column<string>(maxLength: 128, nullable: false),
+                    LoginProvider = table.Column<string>(nullable: false),
+                    ProviderKey = table.Column<string>(nullable: false),
                     ProviderDisplayName = table.Column<string>(nullable: true),
                     UserId = table.Column<string>(nullable: false)
                 },
@@ -230,8 +209,8 @@ namespace ExodusFreedomLoans.DataAccess.Migrations
                 columns: table => new
                 {
                     UserId = table.Column<string>(nullable: false),
-                    LoginProvider = table.Column<string>(maxLength: 128, nullable: false),
-                    Name = table.Column<string>(maxLength: 128, nullable: false),
+                    LoginProvider = table.Column<string>(nullable: false),
+                    Name = table.Column<string>(nullable: false),
                     Value = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
@@ -245,35 +224,72 @@ namespace ExodusFreedomLoans.DataAccess.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
-            migrationBuilder.CreateIndex(
-                name: "IX_Applicant_AddressForeignKey",
-                table: "Applicant",
-                column: "AddressForeignKey");
+            migrationBuilder.CreateTable(
+                name: "Applicant",
+                columns: table => new
+                {
+                    ApplicantKey = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ApplicantName = table.Column<string>(nullable: false),
+                    ApplicantEmail = table.Column<string>(nullable: false),
+                    ApplicantDOB = table.Column<string>(nullable: false),
+                    ApplicantPhone = table.Column<string>(nullable: false),
+                    ApplicantStreetAddress = table.Column<string>(nullable: false),
+                    ApplicantCity = table.Column<string>(nullable: false),
+                    ApplicantState = table.Column<string>(nullable: false),
+                    ApplicantZipCode = table.Column<string>(maxLength: 5, nullable: false),
+                    ApplicantHousingType = table.Column<int>(nullable: false),
+                    PrevApplicantStreetAddress = table.Column<string>(nullable: false),
+                    PrevApplicantCity = table.Column<string>(nullable: false),
+                    PrevApplicantState = table.Column<string>(nullable: false),
+                    PrevApplicantZipCode = table.Column<string>(maxLength: 5, nullable: false),
+                    PrevApplicantHousingType = table.Column<int>(nullable: false),
+                    EmployerName = table.Column<string>(nullable: true),
+                    EmployerStreetAddress = table.Column<string>(nullable: true),
+                    EmployerCity = table.Column<string>(nullable: true),
+                    EmployerState = table.Column<string>(nullable: true),
+                    EmployerZipCode = table.Column<string>(maxLength: 5, nullable: true),
+                    EmployerEmail = table.Column<string>(nullable: true),
+                    EmployerPhone = table.Column<string>(nullable: true),
+                    EmployerTenure = table.Column<int>(nullable: false),
+                    ApplicantPosition = table.Column<string>(nullable: true),
+                    ApplicantPayStructure = table.Column<bool>(nullable: false),
+                    ApplicantMonthlyIncome = table.Column<string>(nullable: true),
+                    PrevEmployerName = table.Column<string>(nullable: true),
+                    PrevEmployerStreetAddress = table.Column<string>(nullable: true),
+                    PrevEmployerCity = table.Column<string>(nullable: true),
+                    PrevEmployerState = table.Column<string>(nullable: true),
+                    PrevEmployerZipCode = table.Column<string>(maxLength: 5, nullable: true),
+                    PrevEmployerEmail = table.Column<string>(nullable: true),
+                    PrevEmployerPhone = table.Column<string>(nullable: true),
+                    PrevEmployerTenure = table.Column<int>(nullable: false),
+                    PrevApplicantPosition = table.Column<string>(nullable: true),
+                    PrevApplicantPayStructure = table.Column<bool>(nullable: false),
+                    PrevApplicantMonthlyIncome = table.Column<string>(nullable: true),
+                    NearestRelativeName = table.Column<string>(nullable: false),
+                    NearestRelativeStreetAddress = table.Column<string>(nullable: false),
+                    NearestRelativeCity = table.Column<string>(nullable: false),
+                    NearestRelativeState = table.Column<string>(nullable: false),
+                    NearestRelativeZipCode = table.Column<string>(maxLength: 5, nullable: false),
+                    NearestRelativePhone = table.Column<string>(nullable: false),
+                    NearestRelativeRelation = table.Column<string>(nullable: false),
+                    ExpenseSheetId = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Applicant", x => x.ApplicantKey);
+                    table.ForeignKey(
+                        name: "FK_Applicant_ExpenseReport_ExpenseSheetId",
+                        column: x => x.ExpenseSheetId,
+                        principalTable: "ExpenseReport",
+                        principalColumn: "ExpenseReportKey",
+                        onDelete: ReferentialAction.Cascade);
+                });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Applicant_CoApplicantForeignKey",
+                name: "IX_Applicant_ExpenseSheetId",
                 table: "Applicant",
-                column: "CoApplicantForeignKey");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Applicant_EmployerAddressForeignKey",
-                table: "Applicant",
-                column: "EmployerAddressForeignKey");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Applicant_NearestRelativeAddressForeignKey",
-                table: "Applicant",
-                column: "NearestRelativeAddressForeignKey");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Applicant_PrevAddressForeignKey",
-                table: "Applicant",
-                column: "PrevAddressForeignKey");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Applicant_PreviousAddressForeignKey",
-                table: "Applicant",
-                column: "PreviousAddressForeignKey");
+                column: "ExpenseSheetId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
@@ -318,6 +334,9 @@ namespace ExodusFreedomLoans.DataAccess.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
+                name: "Address");
+
+            migrationBuilder.DropTable(
                 name: "Applicant");
 
             migrationBuilder.DropTable(
@@ -336,7 +355,7 @@ namespace ExodusFreedomLoans.DataAccess.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "Address");
+                name: "ExpenseReport");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");

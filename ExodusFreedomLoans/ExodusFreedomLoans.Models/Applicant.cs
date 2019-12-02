@@ -29,24 +29,72 @@ namespace ExodusFreedomLoans.Models
         [Display(Name = "Applicant Phone Number")]
         public string ApplicantPhone { get; set; }
 
+        [Required]
+        [Display(Name = ("Street Address"))]
+        public string ApplicantStreetAddress { get; set; }
 
-        [Display(Name = "Applicant Address")]
-        [ForeignKey("AddressForeignKey")]
-        public Address ApplicantAddress { get; set; }
+        [Required]
+        [Display(Name = "City")]
+        public string ApplicantCity { get; set; }
+
+        [Required]
+        [Display(Name = "State")]
+        public string ApplicantState { get; set; }
+
+        [Required]
+        [Display(Name = "ZipCode")]
+        [MinLength(5)]
+        [MaxLength(5)]
+        public string ApplicantZipCode { get; set; }
+
+        [Required]
+        [Display(Name="Rent Or Own")]
+        public int ApplicantHousingType { get; set; }
 
 
-        [Display(Name = "Applicant Previous Address")]
-        [ForeignKey("PrevAddressForeignKey")]
-        public Address PreviousAddress { get; set; }
+        [Required]
+        [Display(Name = ("Street Address"))]
+        public string PrevApplicantStreetAddress { get; set; } 
+
+        [Required]
+        [Display(Name = "City")]
+        public string PrevApplicantCity { get; set; }
+
+        [Required]
+        [Display(Name = "State")]
+        public string PrevApplicantState { get; set; }
+
+        [Required]
+        [Display(Name = "ZipCode")]
+        [MinLength(5)]
+        [MaxLength(5)]
+        public string PrevApplicantZipCode { get; set; }
+
+        [Required]
+        [Display(Name = "Rent Or Own")]
+        public int PrevApplicantHousingType { get; set; }
 
 
         [Display(Name = "Current Employer Name")]
         public string EmployerName { get; set; }
 
 
-        [Display(Name = "Current Employer Address")]
-        [ForeignKey("EmployerAddressForeignKey")]
-        public Address EmployerAddress { get; set; }
+        [Display(Name = ("Street Address"))]
+        public string EmployerStreetAddress { get; set; }
+
+
+        [Display(Name = "City")]
+        public string EmployerCity { get; set; }
+
+
+        [Display(Name = "State")]
+        public string EmployerState { get; set; }
+
+
+        [Display(Name = "ZipCode")]
+        [MinLength(5)]
+        [MaxLength(5)]
+        public string EmployerZipCode { get; set; }
 
 
         [EmailAddress]
@@ -77,10 +125,23 @@ namespace ExodusFreedomLoans.Models
         [Display(Name = "Previous Employer")]
         public string PrevEmployerName { get; set; }
 
+      
+        [Display(Name = ("Street Address"))]
+        public string PrevEmployerStreetAddress { get; set; }
 
-        [Display(Name = "Previous Employer Address")]
-        [ForeignKey("PreviousAddressForeignKey")]
-        public Address PrevEmployerAddress { get; set; }
+   
+        [Display(Name = "City")]
+        public string PrevEmployerCity { get; set; }
+
+   
+        [Display(Name = "State")]
+        public string PrevEmployerState { get; set; }
+
+
+        [Display(Name = "ZipCode")]
+        [MinLength(5)]
+        [MaxLength(5)]
+        public string PrevEmployerZipCode { get; set; }
 
 
         [EmailAddress]
@@ -111,11 +172,24 @@ namespace ExodusFreedomLoans.Models
         [Required]
         [Display(Name = "Nearest Relative Name")]
         public string NearestRelativeName { get; set; }
+        
+        [Required]
+        [Display(Name = ("Street Address"))]
+        public string NearestRelativeStreetAddress { get; set; }
 
+        [Required]
+        [Display(Name = "City")]
+        public string NearestRelativeCity { get; set; }
 
-        [Display(Name = "Nearest Relative Address")]
-        [ForeignKey("NearestRelativeAddressForeignKey")]
-        public Address NearestRelativeAddress { get; set; }
+        [Required]
+        [Display(Name = "State")]
+        public string NearestRelativeState { get; set; }
+
+        [Required]
+        [MinLength(5)]
+        [MaxLength(5)]
+        [Display(Name = "ZipCode")]
+        public string NearestRelativeZipCode { get; set; }
 
         [Required]
         [Phone]
@@ -128,17 +202,13 @@ namespace ExodusFreedomLoans.Models
 
         private Loan[] listOfLoans;
 
-        [ForeignKey("CoApplicantForeignKey")]
-        [Display(Name = "Co-applicant Key")]
-        public Applicant CoApplicant { get; set; }
-
         /* insert partner key */
 
-        
+        [Required]
+        public int ExpenseSheetId { get; set; }
 
-        [ForeignKey("ExpenseSheetForeignKey")]
-        [Display(Name = "Expense Foreign Key")]
-        public int ExpenseForeignKey { get; set; }
+        [ForeignKey("ExpenseSheetId")]
+        public ExpenseReport ExpenseReport { get; set; }
 
         public Loan[] GetListOfLoans()
         {
