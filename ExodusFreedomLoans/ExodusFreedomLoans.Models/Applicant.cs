@@ -42,7 +42,7 @@ namespace ExodusFreedomLoans.Models
         public string ApplicantState { get; set; }
 
         [Required]
-        [Display(Name = "ZipCode")]
+        [Display(Name = "Zip Code")]
         [MinLength(5)]
         [MaxLength(5)]
         public string ApplicantZipCode { get; set; }
@@ -65,7 +65,7 @@ namespace ExodusFreedomLoans.Models
         public string PrevApplicantState { get; set; }
 
         [Required]
-        [Display(Name = "ZipCode")]
+        [Display(Name = "Zip Code")]
         [MinLength(5)]
         [MaxLength(5)]
         public string PrevApplicantZipCode { get; set; }
@@ -91,7 +91,7 @@ namespace ExodusFreedomLoans.Models
         public string EmployerState { get; set; }
 
 
-        [Display(Name = "ZipCode")]
+        [Display(Name = "Zip Code")]
         [MinLength(5)]
         [MaxLength(5)]
         public string EmployerZipCode { get; set; }
@@ -138,7 +138,7 @@ namespace ExodusFreedomLoans.Models
         public string PrevEmployerState { get; set; }
 
 
-        [Display(Name = "ZipCode")]
+        [Display(Name = "Zip Code")]
         [MinLength(5)]
         [MaxLength(5)]
         public string PrevEmployerZipCode { get; set; }
@@ -188,7 +188,7 @@ namespace ExodusFreedomLoans.Models
         [Required]
         [MinLength(5)]
         [MaxLength(5)]
-        [Display(Name = "ZipCode")]
+        [Display(Name = "Zip Code")]
         public string NearestRelativeZipCode { get; set; }
 
         [Required]

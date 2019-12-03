@@ -64,9 +64,9 @@
         </div>
         <!-- Figure out Address-->
         <div class="row">
-            <h3 class="text-secondary">
+            <h4 class="text-secondary">
                 Applicant Current Address
-            </h3>
+            </h4>
         </div>
 
         <div class="form-group row">
@@ -78,7 +78,37 @@
                 <span asp-validation-for="ApplicantStreetAddress" class="text-danger"></span>
             </div>
         </div>
-        <!-- Previous Address-->
+        <div class="form-group row">
+            <div class="col-1">
+                <label asp-for="ApplicantCity"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="ApplicantCity" class="form-control" />
+                <span asp-validation-for="ApplicantCity" class="text-danger"></span>
+            </div>
+            <div class="col-1">
+                <label asp-for="ApplicantState"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="ApplicantState" class="form-control" />
+                <span asp-validation-for="ApplicantState" class="text-danger"></span>
+            </div>
+            <div class="col-1">
+                <label asp-for="ApplicantZipCode"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="ApplicantZipCode" class="form-control" />
+                <span asp-validation-for="ApplicantZipCode" class="text-danger"></span>
+            </div>
+        </div>
+
+        <!-- Housing Type and Tenure NEEDED-->
+
+        <div class="row">
+            <h3 class="text-primary">
+                Current Work
+            </h3>
+        </div>
 
         <div class="form-group row">
             <div class="col-4">
@@ -90,7 +120,45 @@
             </div>
         </div>
 
+        <div class="row">
+            <h4 class="text-secondary">
+                Work Address
+            </h4>
+        </div>
         <!-- Employer Address-->
+
+        <div class="form-group row">
+            <div class="col-4">
+                <label asp-for="EmployerStreetAddress"></label>
+            </div>
+            <div class="col-8">
+                <input asp-for="EmployerStreetAddress" class="form-control" />
+                <span asp-validation-for="EmployerStreetAddress" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-1">
+                <label asp-for="EmployerCity"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="EmployerCity" class="form-control" />
+                <span asp-validation-for="EmployerCity" class="text-danger"></span>
+            </div>
+            <div class="col-1">
+                <label asp-for="EmployerState"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="EmployerState" class="form-control" />
+                <span asp-validation-for="EmployerState" class="text-danger"></span>
+            </div>
+            <div class="col-1">
+                <label asp-for="EmployerZipCode"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="EmployerZipCode" class="form-control" />
+                <span asp-validation-for="EmployerZipCode" class="text-danger"></span>
+            </div>
+        </div>
 
         <div class="form-group row">
             <div class="col-4">
@@ -131,82 +199,87 @@
 
         <!-- Turn into hourly / salary-->
         <div class="form-group row">
-            <div class="col-4">
+            <div class="col-2">
                 <label asp-for="ApplicantPayStructure"></label>
             </div>
-            <div class="col-8">
+            <div class="col-4">
                 <input asp-for="ApplicantPayStructure" class="form-control" />
                 <span asp-validation-for="ApplicantPayStructure" class="text-danger"></span>
             </div>
-        </div>
-        <div class="form-group row">
-            <div class="col-4">
+            <div class="col-2">
                 <label asp-for="ApplicantMonthlyIncome"></label>
             </div>
-            <div class="col-8">
+            <div class="col-4">
                 <input asp-for="ApplicantMonthlyIncome" class="form-control" />
                 <span asp-validation-for="ApplicantMonthlyIncome" class="text-danger"></span>
             </div>
         </div>
 
-        <!--INSERT Prev Employer Address-->
+        <!--INSERT Prev Employer Address
 
-        <div class="form-group row">
-            <div class="col-4">
-                <label asp-for="PrevEmployerEmail"></label>
-            </div>
-            <div class="col-8">
-                <input asp-for="PrevEmployerEmail" class="form-control" />
-                <span asp-validation-for="PrevEmployerEmail" class="text-danger"></span>
-            </div>
-        </div>
-        <div class="form-group row">
-            <div class="col-4">
-                <label asp-for="PrevEmployerPhone"></label>
-            </div>
-            <div class="col-8">
-                <input asp-for="PrevEmployerPhone" class="form-control" />
-                <span asp-validation-for="PrevEmployerPhone" class="text-danger"></span>
-            </div>
-        </div>
-        <div class="form-group row">
-            <div class="col-4">
-                <label asp-for="PrevEmployerTenure"></label>
-            </div>
-            <div class="col-8">
-                <input asp-for="PrevEmployerTenure" class="form-control" />
-                <span asp-validation-for="PrevEmployerTenure" class="text-danger"></span>
-            </div>
-        </div>
-        <div class="form-group row">
-            <div class="col-4">
-                <label asp-for="PrevApplicantPosition"></label>
-            </div>
-            <div class="col-8">
-                <input asp-for="PrevApplicantPosition" class="form-control" />
-                <span asp-validation-for="PrevApplicantPosition" class="text-danger"></span>
-            </div>
+     <div class="form-group row">
+         <div class="col-4">
+             <label asp-for="PrevEmployerEmail"></label>
+         </div>
+         <div class="col-8">
+             <input asp-for="PrevEmployerEmail" class="form-control" />
+             <span asp-validation-for="PrevEmployerEmail" class="text-danger"></span>
+         </div>
+     </div>
+     <div class="form-group row">
+         <div class="col-4">
+             <label asp-for="PrevEmployerPhone"></label>
+         </div>
+         <div class="col-8">
+             <input asp-for="PrevEmployerPhone" class="form-control" />
+             <span asp-validation-for="PrevEmployerPhone" class="text-danger"></span>
+         </div>
+     </div>
+     <div class="form-group row">
+         <div class="col-4">
+             <label asp-for="PrevEmployerTenure"></label>
+         </div>
+         <div class="col-8">
+             <input asp-for="PrevEmployerTenure" class="form-control" />
+             <span asp-validation-for="PrevEmployerTenure" class="text-danger"></span>
+         </div>
+     </div>
+     <div class="form-group row">
+         <div class="col-4">
+             <label asp-for="PrevApplicantPosition"></label>
+         </div>
+         <div class="col-8">
+             <input asp-for="PrevApplicantPosition" class="form-control" />
+             <span asp-validation-for="PrevApplicantPosition" class="text-danger"></span>
+         </div>
+     </div>
+
+    INSERT Prev Turn into hourly / salary
+     <div class="form-group row">
+         <div class="col-4">
+             <label asp-for="PrevApplicantPayStructure"></label>
+         </div>
+         <div class="col-8">
+             <input asp-for="PrevApplicantPayStructure" class="form-control" />
+             <span asp-validation-for="PrevApplicantPayStructure" class="text-danger"></span>
+         </div>
+     </div>
+     <div class="form-group row">
+         <div class="col-4">
+             <label asp-for="PrevApplicantMonthlyIncome"></label>
+         </div>
+         <div class="col-8">
+             <input asp-for="PrevApplicantMonthlyIncome" class="form-control" />
+             <span asp-validation-for="PrevApplicantMonthlyIncome" class="text-danger"></span>
+         </div>
+     </div> -->
+
+        <div class="row">
+            <h3 class="text-primary">
+                Nearest Relative
+            </h3>
         </div>
 
-        <!-- INSERT Prev Turn into hourly / salary-->
-        <div class="form-group row">
-            <div class="col-4">
-                <label asp-for="PrevApplicantPayStructure"></label>
-            </div>
-            <div class="col-8">
-                <input asp-for="PrevApplicantPayStructure" class="form-control" />
-                <span asp-validation-for="PrevApplicantPayStructure" class="text-danger"></span>
-            </div>
-        </div>
-        <div class="form-group row">
-            <div class="col-4">
-                <label asp-for="PrevApplicantMonthlyIncome"></label>
-            </div>
-            <div class="col-8">
-                <input asp-for="PrevApplicantMonthlyIncome" class="form-control" />
-                <span asp-validation-for="PrevApplicantMonthlyIncome" class="text-danger"></span>
-            </div>
-        </div>
         <div class="form-group row">
             <div class="col-4">
                 <label asp-for="NearestRelativeName"></label>
@@ -218,6 +291,45 @@
         </div>
 
         <!-- Nearest Relative Address-->
+        <div class="row">
+            <p class="text-secondary">
+                Nearest Relative Address
+            </p>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-4">
+                <label asp-for="NearestRelativeStreetAddress"></label>
+            </div>
+            <div class="col-8">
+                <input asp-for="NearestRelativeStreetAddress" class="form-control" />
+                <span asp-validation-for="NearestRelativeStreetAddress" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-1">
+                <label asp-for="NearestRelativeCity"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="NearestRelativeCity" class="form-control" />
+                <span asp-validation-for="NearestRelativeCity" class="text-danger"></span>
+            </div>
+            <div class="col-1">
+                <label asp-for="NearestRelativeState"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="NearestRelativeState" class="form-control" />
+                <span asp-validation-for="NearestRelativeState" class="text-danger"></span>
+            </div>
+            <div class="col-1">
+                <label asp-for="NearestRelativeZipCode"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="NearestRelativeZipCode" class="form-control" />
+                <span asp-validation-for="NearestRelativeZipCode" class="text-danger"></span>
+            </div>
+        </div>
+
 
         <div class="form-group row">
             <div class="col-4">
@@ -230,9 +342,7 @@
         </div>
 
         <!-- Co-applicant functionality-->
-
         <!-- List of Loans-->
-
         <!-- Expense Sheet how to-->
 
 
