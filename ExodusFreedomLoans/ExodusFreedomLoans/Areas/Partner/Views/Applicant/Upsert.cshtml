@@ -1,4 +1,4 @@
-﻿@model ExodusFreedomLoans.Models.Applicant
+﻿@model ExodusFreedomLoans.Models.VMApplicant
 @{
     var title = "New Applicant";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -10,9 +10,9 @@
 
     <div class="row px-2 mx-2 backgroundWhite border">
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-        @if(Model.ApplicantKey != 0)
+        @if(Model.Applicant.ApplicantKey != 0)
         {
-            <input type="hidden" asp-for="ApplicantKey" />
+            <input type="hidden" asp-for="Applicant.ApplicantKey" />
             title = "Edit Applicant";
         }
     </div>
@@ -28,38 +28,38 @@
     <div class="col-8">
         <div class="form-group row">
             <div class="col-4">
-                <label asp-for="ApplicantName"></label>
+                <label asp-for="Applicant.ApplicantName"></label>
             </div>
             <div class="col-8">
-                <input asp-for="ApplicantName" class="form-control" />
-                <span asp-validation-for="ApplicantName" class="text-danger"></span>
+                <input asp-for="Applicant.ApplicantName" class="form-control" />
+                <span asp-validation-for="Applicant.ApplicantName" class="text-danger"></span>
             </div>
         </div>
         <div class="form-group row">
             <div class="col-4">
-                <label asp-for="ApplicantPhone"></label>
+                <label asp-for="Applicant.ApplicantPhone"></label>
             </div>
             <div class="col-8">
-                <input asp-for="ApplicantPhone" class="form-control" />
-                <span asp-validation-for="ApplicantPhone" class="text-danger"></span>
+                <input asp-for="Applicant.ApplicantPhone" class="form-control" />
+                <span asp-validation-for="Applicant.ApplicantPhone" class="text-danger"></span>
             </div>
         </div>
         <div class="form-group row">
             <div class="col-4">
-                <label asp-for="ApplicantEmail"></label>
+                <label asp-for="Applicant.ApplicantEmail"></label>
             </div>
             <div class="col-8">
-                <input asp-for="ApplicantEmail" class="form-control" />
-                <span asp-validation-for="ApplicantEmail" class="text-danger"></span>
+                <input asp-for="Applicant.ApplicantEmail" class="form-control" />
+                <span asp-validation-for="Applicant.ApplicantEmail" class="text-danger"></span>
             </div>
         </div>
         <div class="form-group row">
             <div class="col-4">
-                <label asp-for="ApplicantDOB"></label>
+                <label asp-for="Applicant.ApplicantDOB"></label>
             </div>
             <div class="col-8">
-                <input asp-for="ApplicantDOB" class="form-control" />
-                <span asp-validation-for="ApplicantDOB" class="text-danger"></span>
+                <input asp-for="Applicant.ApplicantDOB" class="form-control" />
+                <span asp-validation-for="Applicant.ApplicantDOB" class="text-danger"></span>
             </div>
         </div>
         <!-- Figure out Address-->
@@ -71,34 +71,34 @@
 
         <div class="form-group row">
             <div class="col-4">
-                <label asp-for="ApplicantStreetAddress"></label>
+                <label asp-for="Applicant.ApplicantStreetAddress"></label>
             </div>
             <div class="col-8">
-                <input asp-for="ApplicantStreetAddress" class="form-control" />
-                <span asp-validation-for="ApplicantStreetAddress" class="text-danger"></span>
+                <input asp-for="Applicant.ApplicantStreetAddress" class="form-control" />
+                <span asp-validation-for="Applicant.ApplicantStreetAddress" class="text-danger"></span>
             </div>
         </div>
         <div class="form-group row">
             <div class="col-1">
-                <label asp-for="ApplicantCity"></label>
+                <label asp-for="Applicant.ApplicantCity"></label>
             </div>
             <div class="col-3">
-                <input asp-for="ApplicantCity" class="form-control" />
-                <span asp-validation-for="ApplicantCity" class="text-danger"></span>
+                <input asp-for="Applicant.ApplicantCity" class="form-control" />
+                <span asp-validation-for="Applicant.ApplicantCity" class="text-danger"></span>
             </div>
             <div class="col-1">
-                <label asp-for="ApplicantState"></label>
+                <label asp-for="Applicant.ApplicantState"></label>
             </div>
             <div class="col-3">
-                <input asp-for="ApplicantState" class="form-control" />
-                <span asp-validation-for="ApplicantState" class="text-danger"></span>
+                <input asp-for="Applicant.ApplicantState" class="form-control" />
+                <span asp-validation-for="Applicant.ApplicantState" class="text-danger"></span>
             </div>
             <div class="col-1">
-                <label asp-for="ApplicantZipCode"></label>
+                <label asp-for="Applicant.ApplicantZipCode"></label>
             </div>
             <div class="col-3">
-                <input asp-for="ApplicantZipCode" class="form-control" />
-                <span asp-validation-for="ApplicantZipCode" class="text-danger"></span>
+                <input asp-for="Applicant.ApplicantZipCode" class="form-control" />
+                <span asp-validation-for="Applicant.ApplicantZipCode" class="text-danger"></span>
             </div>
         </div>
 
@@ -112,11 +112,11 @@
 
         <div class="form-group row">
             <div class="col-4">
-                <label asp-for="EmployerName"></label>
+                <label asp-for="Applicant.EmployerName"></label>
             </div>
             <div class="col-8">
-                <input asp-for="EmployerName" class="form-control" />
-                <span asp-validation-for="EmployerName" class="text-danger"></span>
+                <input asp-for="Applicant.EmployerName" class="form-control" />
+                <span asp-validation-for="Applicant.EmployerName" class="text-danger"></span>
             </div>
         </div>
 
@@ -129,89 +129,89 @@
 
         <div class="form-group row">
             <div class="col-4">
-                <label asp-for="EmployerStreetAddress"></label>
+                <label asp-for="Applicant.EmployerStreetAddress"></label>
             </div>
             <div class="col-8">
-                <input asp-for="EmployerStreetAddress" class="form-control" />
-                <span asp-validation-for="EmployerStreetAddress" class="text-danger"></span>
+                <input asp-for="Applicant.EmployerStreetAddress" class="form-control" />
+                <span asp-validation-for="Applicant.EmployerStreetAddress" class="text-danger"></span>
             </div>
         </div>
         <div class="form-group row">
             <div class="col-1">
-                <label asp-for="EmployerCity"></label>
+                <label asp-for="Applicant.EmployerCity"></label>
             </div>
             <div class="col-3">
-                <input asp-for="EmployerCity" class="form-control" />
-                <span asp-validation-for="EmployerCity" class="text-danger"></span>
+                <input asp-for="Applicant.EmployerCity" class="form-control" />
+                <span asp-validation-for="Applicant.EmployerCity" class="text-danger"></span>
             </div>
             <div class="col-1">
-                <label asp-for="EmployerState"></label>
+                <label asp-for="Applicant.EmployerState"></label>
             </div>
             <div class="col-3">
-                <input asp-for="EmployerState" class="form-control" />
-                <span asp-validation-for="EmployerState" class="text-danger"></span>
+                <input asp-for="Applicant.EmployerState" class="form-control" />
+                <span asp-validation-for="Applicant.EmployerState" class="text-danger"></span>
             </div>
             <div class="col-1">
-                <label asp-for="EmployerZipCode"></label>
+                <label asp-for="Applicant.EmployerZipCode"></label>
             </div>
             <div class="col-3">
-                <input asp-for="EmployerZipCode" class="form-control" />
-                <span asp-validation-for="EmployerZipCode" class="text-danger"></span>
+                <input asp-for="Applicant.EmployerZipCode" class="form-control" />
+                <span asp-validation-for="Applicant.EmployerZipCode" class="text-danger"></span>
             </div>
         </div>
 
         <div class="form-group row">
             <div class="col-4">
-                <label asp-for="EmployerEmail"></label>
+                <label asp-for="Applicant.EmployerEmail"></label>
             </div>
             <div class="col-8">
-                <input asp-for="EmployerEmail" class="form-control" />
-                <span asp-validation-for="EmployerEmail" class="text-danger"></span>
+                <input asp-for="Applicant.EmployerEmail" class="form-control" />
+                <span asp-validation-for="Applicant.EmployerEmail" class="text-danger"></span>
             </div>
         </div>
         <div class="form-group row">
             <div class="col-4">
-                <label asp-for="EmployerPhone"></label>
+                <label asp-for="Applicant.EmployerPhone"></label>
             </div>
             <div class="col-8">
-                <input asp-for="EmployerPhone" class="form-control" />
-                <span asp-validation-for="EmployerPhone" class="text-danger"></span>
+                <input asp-for="Applicant.EmployerPhone" class="form-control" />
+                <span asp-validation-for="Applicant.EmployerPhone" class="text-danger"></span>
             </div>
         </div>
         <div class="form-group row">
             <div class="col-4">
-                <label asp-for="EmployerTenure"></label>
+                <label asp-for="Applicant.EmployerTenure"></label>
             </div>
             <div class="col-8">
-                <input asp-for="EmployerTenure" class="form-control" />
-                <span asp-validation-for="EmployerTenure" class="text-danger"></span>
+                <input asp-for="Applicant.EmployerTenure" class="form-control" />
+                <span asp-validation-for="Applicant.EmployerTenure" class="text-danger"></span>
             </div>
         </div>
         <div class="form-group row">
             <div class="col-4">
-                <label asp-for="ApplicantPosition"></label>
+                <label asp-for="Applicant.ApplicantPosition"></label>
             </div>
             <div class="col-8">
-                <input asp-for="ApplicantPosition" class="form-control" />
-                <span asp-validation-for="ApplicantPosition" class="text-danger"></span>
+                <input asp-for="Applicant.ApplicantPosition" class="form-control" />
+                <span asp-validation-for="Applicant.ApplicantPosition" class="text-danger"></span>
             </div>
         </div>
 
         <!-- Turn into hourly / salary-->
         <div class="form-group row">
             <div class="col-2">
-                <label asp-for="ApplicantPayStructure"></label>
+                <label asp-for="Applicant.ApplicantPayStructure"></label>
             </div>
             <div class="col-4">
-                <input asp-for="ApplicantPayStructure" class="form-control" />
-                <span asp-validation-for="ApplicantPayStructure" class="text-danger"></span>
+                <input asp-for="Applicant.ApplicantPayStructure" class="form-control" />
+                <span asp-validation-for="Applicant.ApplicantPayStructure" class="text-danger"></span>
             </div>
             <div class="col-2">
-                <label asp-for="ApplicantMonthlyIncome"></label>
+                <label asp-for="Applicant.ApplicantMonthlyIncome"></label>
             </div>
             <div class="col-4">
-                <input asp-for="ApplicantMonthlyIncome" class="form-control" />
-                <span asp-validation-for="ApplicantMonthlyIncome" class="text-danger"></span>
+                <input asp-for="Applicant.ApplicantMonthlyIncome" class="form-control" />
+                <span asp-validation-for="Applicant.ApplicantMonthlyIncome" class="text-danger"></span>
             </div>
         </div>
 
@@ -282,11 +282,11 @@
 
         <div class="form-group row">
             <div class="col-4">
-                <label asp-for="NearestRelativeName"></label>
+                <label asp-for="Applicant.NearestRelativeName"></label>
             </div>
             <div class="col-8">
-                <input asp-for="NearestRelativeName" class="form-control" />
-                <span asp-validation-for="NearestRelativeName" class="text-danger"></span>
+                <input asp-for="Applicant.NearestRelativeName" class="form-control" />
+                <span asp-validation-for="Applicant.NearestRelativeName" class="text-danger"></span>
             </div>
         </div>
 
@@ -299,59 +299,510 @@
 
         <div class="form-group row">
             <div class="col-4">
-                <label asp-for="NearestRelativeStreetAddress"></label>
+                <label asp-for="Applicant.NearestRelativeStreetAddress"></label>
             </div>
             <div class="col-8">
-                <input asp-for="NearestRelativeStreetAddress" class="form-control" />
-                <span asp-validation-for="NearestRelativeStreetAddress" class="text-danger"></span>
+                <input asp-for="Applicant.NearestRelativeStreetAddress" class="form-control" />
+                <span asp-validation-for="Applicant.NearestRelativeStreetAddress" class="text-danger"></span>
             </div>
         </div>
         <div class="form-group row">
             <div class="col-1">
-                <label asp-for="NearestRelativeCity"></label>
+                <label asp-for="Applicant.NearestRelativeCity"></label>
             </div>
             <div class="col-3">
-                <input asp-for="NearestRelativeCity" class="form-control" />
-                <span asp-validation-for="NearestRelativeCity" class="text-danger"></span>
+                <input asp-for="Applicant.NearestRelativeCity" class="form-control" />
+                <span asp-validation-for="Applicant.NearestRelativeCity" class="text-danger"></span>
             </div>
             <div class="col-1">
-                <label asp-for="NearestRelativeState"></label>
+                <label asp-for="Applicant.NearestRelativeState"></label>
             </div>
             <div class="col-3">
-                <input asp-for="NearestRelativeState" class="form-control" />
-                <span asp-validation-for="NearestRelativeState" class="text-danger"></span>
+                <input asp-for="Applicant.NearestRelativeState" class="form-control" />
+                <span asp-validation-for="Applicant.NearestRelativeState" class="text-danger"></span>
             </div>
             <div class="col-1">
-                <label asp-for="NearestRelativeZipCode"></label>
+                <label asp-for="Applicant.NearestRelativeZipCode"></label>
             </div>
             <div class="col-3">
-                <input asp-for="NearestRelativeZipCode" class="form-control" />
-                <span asp-validation-for="NearestRelativeZipCode" class="text-danger"></span>
+                <input asp-for="Applicant.NearestRelativeZipCode" class="form-control" />
+                <span asp-validation-for="Applicant.NearestRelativeZipCode" class="text-danger"></span>
             </div>
         </div>
 
 
         <div class="form-group row">
             <div class="col-4">
-                <label asp-for="NearestRelativeRelation"></label>
+                <label asp-for="Applicant.NearestRelativeRelation"></label>
             </div>
             <div class="col-8">
-                <input asp-for="NearestRelativeRelation" class="form-control" />
-                <span asp-validation-for="NearestRelativeRelation" class="text-danger"></span>
+                <input asp-for="Applicant.NearestRelativeRelation" class="form-control" />
+                <span asp-validation-for="Applicant.NearestRelativeRelation" class="text-danger"></span>
             </div>
         </div>
 
+    </div>
+    <br />
+    <br />
         <!-- Co-applicant functionality-->
+
         <!-- List of Loans-->
+
         <!-- Expense Sheet how to-->
+        
+
+    
+
+    <div class="col-12">
+        <div class="row">
+            <h2 class="text-primary">Expense Report</h2>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <p class="text-secondary">Income</p>
+            </div>
+            <div class="col-2">
+                <p class="text-secondary">Monthly Amount</p>
+            </div>
+            <div class="col-4">
+                <p class="text-secondary">Expenses</p>
+            </div>
+            <div class="col-2">
+                <p class="text-secondary">Monthly Amount</p>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="ExpenseReport.FullTimeIncome" class="form-control"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="ExpenseReport.FullTimeIncome" class="form-control">
+                <span asp-validation-for="ExpenseReport.FullTimeIncome" class="text-danger"></span>
+            </div>
+            <div class="col-3">
+                <label asp-for="ExpenseReport.MortgageExpense" class="form-control"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="ExpenseReport.MortgageExpense" class="form-control">
+                <span asp-validation-for="ExpenseReport.MortgageExpense" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="ExpenseReport.PartTimeIncome" class="form-control"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="ExpenseReport.PartTimeIncome" class="form-control">
+                <span asp-validation-for="ExpenseReport.PartTimeIncome" class="text-danger"></span>
+            </div>
+            <div class="col-3">
+                <label asp-for="ExpenseReport.TechnologyExpense" class="form-control"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="ExpenseReport.TechnologyExpense" class="form-control">
+                <span asp-validation-for="ExpenseReport.TechnologyExpense" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="ExpenseReport.SelfEmploymentIncome" class="form-control"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="ExpenseReport.SelfEmploymentIncome" class="form-control">
+                <span asp-validation-for="ExpenseReport.SelfEmploymentIncome" class="text-danger"></span>
+            </div>
+            <div class="col-3">
+                <label asp-for="ExpenseReport.ElecGasExpense" class="form-control"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="ExpenseReport.ElecGasExpense" class="form-control">
+                <span asp-validation-for="ExpenseReport.ElecGasExpense" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="ExpenseReport.OtherMonthlyIncome" class="form-control"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="ExpenseReport.OtherMonthlyIncome" class="form-control">
+                <span asp-validation-for="ExpenseReport.OtherMonthlyIncome" class="text-danger"></span>
+            </div>
+            <div class="col-3">
+                <label asp-for="ExpenseReport.WaterBillExpense" class="form-control"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="ExpenseReport.WaterBillExpense" class="form-control">
+                <span asp-validation-for="ExpenseReport.WaterBillExpense" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="ExpenseReport.RetirementIncome" class="form-control"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="ExpenseReport.RetirementIncome" class="form-control">
+                <span asp-validation-for="ExpenseReport.RetirementIncome" class="text-danger"></span>
+            </div>
+            <div class="col-3">
+                <label asp-for="ExpenseReport.CableExpense" class="form-control"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="ExpenseReport.CableExpense" class="form-control">
+                <span asp-validation-for="ExpenseReport.CableExpense" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="ExpenseReport.SSAIncome" class="form-control"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="ExpenseReport.SSAIncome" class="form-control">
+                <span asp-validation-for="ExpenseReport.SSAIncome" class="text-danger"></span>
+            </div>
+            <div class="col-3">
+                <label asp-for="ExpenseReport.MaintenanceExpense" class="form-control"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="ExpenseReport.MaintenanceExpense" class="form-control">
+                <span asp-validation-for="ExpenseReport.MaintenanceExpense" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="ExpenseReport.IRAIncome" class="form-control"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="ExpenseReport.IRAIncome" class="form-control">
+                <span asp-validation-for="ExpenseReport.IRAIncome" class="text-danger"></span>
+            </div>
+            <div class="col-3">
+                <label asp-for="ExpenseReport.OtherHousingExpense" class="form-control"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="ExpenseReport.OtherHousingExpense" class="form-control">
+                <span asp-validation-for="ExpenseReport.OtherHousingExpense" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="ExpenseReport.InheritanceIncome" class="form-control"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="ExpenseReport.InheritanceIncome" class="form-control">
+                <span asp-validation-for="ExpenseReport.InheritanceIncome" class="text-danger"></span>
+            </div>
+            <div class="col-3">
+                <label asp-for="ExpenseReport.CarExpense" class="form-control"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="ExpenseReport.CarExpense" class="form-control">
+                <span asp-validation-for="ExpenseReport.CarExpense" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="ExpenseReport.TANFIncome" class="form-control"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="ExpenseReport.TANFIncome" class="form-control">
+                <span asp-validation-for="ExpenseReport.TANFIncome" class="text-danger"></span>
+            </div>
+            <div class="col-3">
+                <label asp-for="ExpenseReport.AltTransportationExpense" class="form-control"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="ExpenseReport.AltTransportationExpense" class="form-control">
+                <span asp-validation-for="ExpenseReport.AltTransportationExpense" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="ExpenseReport.SNAPIncome" class="form-control"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="ExpenseReport.SNAPIncome" class="form-control">
+                <span asp-validation-for="ExpenseReport.SNAPIncome" class="text-danger"></span>
+            </div>
+            <div class="col-3">
+                <label asp-for="ExpenseReport.FuelExpense" class="form-control"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="ExpenseReport.FuelExpense" class="form-control">
+                <span asp-validation-for="ExpenseReport.FuelExpense" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="ExpenseReport.PublicHousingIncome" class="form-control"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="ExpenseReport.PublicHousingIncome" class="form-control">
+                <span asp-validation-for="ExpenseReport.PublicHousingIncome" class="text-danger"></span>
+            </div>
+            <div class="col-3">
+                <label asp-for="ExpenseReport.VehichleMaintenanceExpense" class="form-control"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="ExpenseReport.VehichleMaintenanceExpense" class="form-control">
+                <span asp-validation-for="ExpenseReport.VehichleMaintenanceExpense" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="ExpenseReport.SSDisabilityIncome" class="form-control"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="ExpenseReport.SSDisabilityIncome" class="form-control">
+                <span asp-validation-for="ExpenseReport.SSDisabilityIncome" class="text-danger"></span>
+            </div>
+            <div class="col-3">
+                <label asp-for="ExpenseReport.OtherTransportationExpense" class="form-control"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="ExpenseReport.OtherTransportationExpense" class="form-control">
+                <span asp-validation-for="ExpenseReport.OtherTransportationExpense" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="ExpenseReport.OtherAssistanceIncome" class="form-control"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="ExpenseReport.OtherAssistanceIncome" class="form-control">
+                <span asp-validation-for="ExpenseReport.OtherAssistanceIncome" class="text-danger"></span>
+            </div>
+            <div class="col-3">
+                <label asp-for="ExpenseReport.HomeInsuranceExpense" class="form-control"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="ExpenseReport.HomeInsuranceExpense" class="form-control">
+                <span asp-validation-for="ExpenseReport.HomeInsuranceExpense" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="ExpenseReport.AlimonyIncome" class="form-control"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="ExpenseReport.ChildSupportIncome" class="form-control">
+                <span asp-validation-for="ExpenseReport.OtherSupportIncome" class="text-danger"></span>
+            </div>
+            <div class="col-3">
+                <label asp-for="ExpenseReport.VehicleInsuranceExpense" class="form-control"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="ExpenseReport.VehicleInsuranceExpense" class="form-control">
+                <span asp-validation-for="ExpenseReport.VehicleInsuranceExpense" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="ExpenseReport.ChildSupportIncome" class="form-control"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="ExpenseReport.ChildSupportIncome" class="form-control">
+                <span asp-validation-for="ExpenseReport.ChildSupportIncome" class="text-danger"></span>
+            </div>
+            <div class="col-3">
+                <label asp-for="ExpenseReport.HealthInsuranceExpense" class="form-control"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="ExpenseReport.HealthInsuranceExpense" class="form-control">
+                <span asp-validation-for="ExpenseReport.HealthInsuranceExpense" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="ExpenseReport.OtherSupportIncome" class="form-control"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="ExpenseReport.OtherSupportIncome" class="form-control">
+                <span asp-validation-for="ExpenseReport.OtherSupportIncome" class="text-danger"></span>
+            </div>
+            <div class="col-3">
+                <label asp-for="ExpenseReport.LifeInsuranceExpense" class="form-control"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="ExpenseReport.LifeInsuranceExpense" class="form-control">
+                <span asp-validation-for="ExpenseReport.LifeInsuranceExpense" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+
+            </div>
+            <div class="col-3">
+
+            </div>
+            <div class="col-3">
+                <label asp-for="ExpenseReport.LongTermCareExpense" class="form-control"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="ExpenseReport.LongTermCareExpense" class="form-control">
+                <span asp-validation-for="ExpenseReport.LongTermCareExpense" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+
+            </div>
+            <div class="col-3">
+
+            </div>
+            <div class="col-3">
+                <label asp-for="ExpenseReport.OtherInsuranceExpense" class="form-control"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="ExpenseReport.OtherInsuranceExpense" class="form-control">
+                <span asp-validation-for="ExpenseReport.OtherInsuranceExpense" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+
+            </div>
+            <div class="col-3">
+
+            </div>
+            <div class="col-3">
+                <label asp-for="ExpenseReport.PetExpense" class="form-control"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="ExpenseReport.PetExpense" class="form-control">
+                <span asp-validation-for="ExpenseReport.PetExpense" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+
+            </div>
+            <div class="col-3">
+
+            </div>
+            <div class="col-3">
+                <label asp-for="ExpenseReport.DoctorExpense" class="form-control"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="ExpenseReport.DoctorExpense" class="form-control">
+                <span asp-validation-for="ExpenseReport.DoctorExpense" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+
+            </div>
+            <div class="col-3">
+
+            </div>
+            <div class="col-3">
+                <label asp-for="ExpenseReport.PerscriptionExpense" class="form-control"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="ExpenseReport.PerscriptionExpense" class="form-control">
+                <span asp-validation-for="ExpenseReport.PerscriptionExpense" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+
+            </div>
+            <div class="col-3">
+
+            </div>
+            <div class="col-3">
+                <label asp-for="ExpenseReport.MedicalCareExpense" class="form-control"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="ExpenseReport.MedicalCareExpense" class="form-control">
+                <span asp-validation-for="ExpenseReport.MedicalCareExpense" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+
+            </div>
+            <div class="col-3">
+
+            </div>
+            <div class="col-3">
+                <label asp-for="ExpenseReport.PersonalCareExpense" class="form-control"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="ExpenseReport.PersonalCareExpense" class="form-control">
+                <span asp-validation-for="ExpenseReport.PersonalCareExpense" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+
+            </div>
+            <div class="col-3">
+
+            </div>
+            <div class="col-3">
+                <label asp-for="ExpenseReport.ChargeAccountsExpense" class="form-control"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="ExpenseReport.ChargeAccountsExpense" class="form-control">
+                <span asp-validation-for="ExpenseReport.ChargeAccountsExpense" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+
+            </div>
+            <div class="col-3">
+
+            </div>
+            <div class="col-3">
+                <label asp-for="ExpenseReport.LoanExpense" class="form-control"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="ExpenseReport.LoanExpense" class="form-control">
+                <span asp-validation-for="ExpenseReport.LoanExpense" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+
+            </div>
+            <div class="col-3">
+
+            </div>
+            <div class="col-3">
+                <label asp-for="ExpenseReport.DebtHighExpense" class="form-control"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="ExpenseReport.DebtHighExpense" class="form-control">
+                <span asp-validation-for="ExpenseReport.DebtHighExpense" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+
+            </div>
+            <div class="col-3">
+
+            </div>
+            <div class="col-3">
+                <label asp-for="ExpenseReport.AlimonyChildSupportExpense" class="form-control"></label>
+            </div>
+            <div class="col-3">
+                <input asp-for="ExpenseReport.AlimonyChildSupportExpense" class="form-control">
+                <span asp-validation-for="ExpenseReport.AlimonyChildSupportExpense" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+    
+
 
 
         <div class="form-group row">
             <div class="col-8 offset-4">
-                @if (Model.ApplicantKey != 0)
+                @if (Model.Applicant.ApplicantKey != 0)
                 {
                     //Edit button and back to list
-                    <partial name="_EditAndBackToList" model="Model.ApplicantKey" />
+                    <partial name="_EditAndBackToList" model="Model.Applicant.ApplicantKey" />
 
                 }
                 else
@@ -361,6 +812,6 @@
                 }
             </div>
         </div>
-    </div>
+    
 </form>
 

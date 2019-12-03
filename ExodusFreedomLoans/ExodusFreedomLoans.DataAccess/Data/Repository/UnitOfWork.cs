@@ -17,6 +17,8 @@ namespace ExodusFreedomLoans.DataAccess.Data.Repository
 
         public IApplicantRepository Applicant { get; private set; }
 
+        public IExpenseRepository ExpenseReport { get; private set; }
+
         public void Dispose()
         {
             _db.Dispose();

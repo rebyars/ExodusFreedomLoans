@@ -25,38 +25,47 @@ namespace ExodusFreedomLoans.Areas.Partner.Controllers
 
         public IActionResult Upsert(int? id)
         {
-            Applicant applicant = new Applicant();
-            if (id == null)
+            VMApplicant vmApplicant = new VMApplicant
             {
-                return View(applicant);
+                Applicant = new Applicant(),
+                ExpenseReport = new ExpenseReport()
+            };
+
+            if (id == null)
+
+            {
+                return View(vmApplicant);
             }
-            applicant = _unitOfWork.Applicant.Get(id.GetValueOrDefault());
-            if (applicant == null)
+            vmApplicant.Applicant = _unitOfWork.Applicant.Get(id.GetValueOrDefault());
+            vmApplicant.ExpenseReport = _unitOfWork.ExpenseReport.Get(_unitOfWork.Applicant.Get(id.GetValueOrDefault()).ExpenseSheetId);
+            if (vmApplicant.Applicant == null)
             {
                 return NotFound();
             }
-            return View(applicant);
+            return View(vmApplicant);
 
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Upsert(Applicant applicant)
+        public IActionResult Upsert(VMApplicant vmApplicant)
         {
             if (ModelState.IsValid)
             {
-                if(applicant.ApplicantKey == 0)
+                if(vmApplicant.Applicant.ApplicantKey == 0)
                 {
-                    _unitOfWork.Applicant.Add(applicant);
+                    _unitOfWork.Applicant.Add(vmApplicant.Applicant);
+                    _unitOfWork.ExpenseReport.Add(vmApplicant.ExpenseReport);
                 }
                 else
                 {
-                    _unitOfWork.Applicant.Update(applicant);
+                    _unitOfWork.Applicant.Update(vmApplicant.Applicant);
+                    _unitOfWork.ExpenseReport.Update(vmApplicant.ExpenseReport);
                 }
                 _unitOfWork.Save();
                 return RedirectToAction(nameof(Index));
             }
-            return View(applicant);
+            return View(vmApplicant);
         }
 
 
