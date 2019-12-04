@@ -37,7 +37,7 @@ namespace ExodusFreedomLoans.Areas.Partner.Controllers
                 return View(vmApplicant);
             }
             vmApplicant.Applicant = _unitOfWork.Applicant.Get(id.GetValueOrDefault());
-            vmApplicant.ExpenseReport = _unitOfWork.ExpenseReport.Get(_unitOfWork.Applicant.Get(id.GetValueOrDefault()).ExpenseSheetId);
+            vmApplicant.ExpenseReport = _unitOfWork.ExpenseReport.Get(_unitOfWork.Applicant.Get(id.GetValueOrDefault()).ExpenseSheetId.GetValueOrDefault());
             if (vmApplicant.Applicant == null)
             {
                 return NotFound();
@@ -50,15 +50,15 @@ namespace ExodusFreedomLoans.Areas.Partner.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Upsert(VMApplicant vmApplicant)
         {
-            vmApplicant.Applicant.ExpenseSheetId = vmApplicant.ExpenseReport.ExpenseReportKey;
-
+           /* vmApplicant.Applicant.ExpenseSheetId = vmApplicant.ExpenseReport.ExpenseReportKey; */
+  
             if (ModelState.IsValid)
             {
                 if(vmApplicant.Applicant.ApplicantKey == 0)
                 {
                     _unitOfWork.ExpenseReport.Add(vmApplicant.ExpenseReport);
-                    _unitOfWork.Save();
                     _unitOfWork.Applicant.Add(vmApplicant.Applicant);
+                    _unitOfWork.Save();
                 }
                 else
                 {

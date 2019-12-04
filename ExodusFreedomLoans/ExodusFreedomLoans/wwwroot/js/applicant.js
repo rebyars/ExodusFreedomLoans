@@ -19,8 +19,8 @@ function loadDataTable() {
                 "render": function (data) {
                     return `<div class="text-center>
                             <a href="/Partner/applicant/Upsert/${data}" class='btn btn-success text-white' style='cursor:pointer; width 100px;'>
-                                <i class = "far fa-edit></i> Edit </a>
-                    </div>
+                                <i class = 'fas fa-edit'></i> Edit </a>
+                            </div>
 
                     `;
                 }, "width": "25%"

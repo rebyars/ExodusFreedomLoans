@@ -96,7 +96,7 @@ namespace ExodusFreedomLoans.DataAccess.Migrations
                         .HasColumnType("nvarchar(5)")
                         .HasMaxLength(5);
 
-                    b.Property<int>("ExpenseSheetId")
+                    b.Property<int?>("ExpenseSheetId")
                         .HasColumnType("int");
 
                     b.Property<string>("NearestRelativeCity")
@@ -130,7 +130,9 @@ namespace ExodusFreedomLoans.DataAccess.Migrations
 
                     b.HasKey("ApplicantKey");
 
-                    b.HasIndex("ExpenseSheetId");
+                    b.HasIndex("ExpenseSheetId")
+                        .IsUnique()
+                        .HasFilter("[ExpenseSheetId] IS NOT NULL");
 
                     b.ToTable("Applicant");
                 });
@@ -149,6 +151,9 @@ namespace ExodusFreedomLoans.DataAccess.Migrations
                         .HasColumnType("int");
 
                     b.Property<int>("AltTransportationExpense")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ApplicantId")
                         .HasColumnType("int");
 
                     b.Property<int>("CableExpense")
@@ -475,10 +480,8 @@ namespace ExodusFreedomLoans.DataAccess.Migrations
             modelBuilder.Entity("ExodusFreedomLoans.Models.Applicant", b =>
                 {
                     b.HasOne("ExodusFreedomLoans.Models.ExpenseReport", "ExpenseReport")
-                        .WithMany()
-                        .HasForeignKey("ExpenseSheetId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .WithOne("Applicant")
+                        .HasForeignKey("ExodusFreedomLoans.Models.Applicant", "ExpenseSheetId");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

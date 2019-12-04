@@ -500,3 +500,5 @@ C:\Users\Riley's PC\Documents\GitHub\ExodusFreedomLoans\ExodusFreedomLoans\Exodu
 C:\Users\Riley's PC\Documents\GitHub\ExodusFreedomLoans\ExodusFreedomLoans\ExodusFreedomLoans\obj\Debug\netcoreapp3.0\Razor\Areas\Partner\Views\Applicant\Upsert.cshtml.g.cs
 C:\Users\Riley's PC\Documents\GitHub\ExodusFreedomLoans\ExodusFreedomLoans\ExodusFreedomLoans\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_CreateAndBackToList.cshtml.g.cs
 C:\Users\Riley's PC\Documents\GitHub\ExodusFreedomLoans\ExodusFreedomLoans\ExodusFreedomLoans\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_EditAndBackToList.cshtml.g.cs
+C:\Users\Riley's PC\Documents\GitHub\ExodusFreedomLoans\ExodusFreedomLoans\ExodusFreedomLoans\bin\Debug\netcoreapp3.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\Riley's PC\Documents\GitHub\ExodusFreedomLoans\ExodusFreedomLoans\ExodusFreedomLoans\bin\Debug\netcoreapp3.0\runtimes\win\lib\netcoreapp2.1\System.Security.Cryptography.Pkcs.dll

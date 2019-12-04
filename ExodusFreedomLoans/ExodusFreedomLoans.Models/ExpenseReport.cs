@@ -181,7 +181,7 @@ namespace ExodusFreedomLoans.Models
         [Required]
         [Display(Name = "Monthly Alimony / Child Support")]
         public int AlimonyChildSupportExpense { get; set; }
-
-
+        public int? ApplicantId { get; set; }
+        public virtual Applicant Applicant { get; set; }
     }
 }

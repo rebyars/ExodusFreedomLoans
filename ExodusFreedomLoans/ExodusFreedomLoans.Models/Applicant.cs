@@ -207,11 +207,11 @@ namespace ExodusFreedomLoans.Models
 
         insert partner key */
 
-        [Required]
-        public int ExpenseSheetId { get; set; }
+        
+        public int? ExpenseSheetId { get; set; }
 
         [ForeignKey("ExpenseSheetId")]
-        public ExpenseReport ExpenseReport { get; set; }
+        public virtual ExpenseReport ExpenseReport { get; set; }
 
         /*
         public Loan[] GetListOfLoans()
