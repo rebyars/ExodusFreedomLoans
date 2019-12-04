@@ -10,6 +10,8 @@ namespace ExodusFreedomLoans.DataAccess.Data.Repository.IRepository
 
         IExpenseRepository ExpenseReport { get; }
 
+        IUserRepository User { get; }
+
         void Save();
     }
 }
