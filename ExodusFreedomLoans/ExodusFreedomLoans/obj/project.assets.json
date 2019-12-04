@@ -3339,6 +3339,9 @@
       "ExodusFreedomLoans.Models/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.0",
+        "dependencies": {
+          "Microsoft.Extensions.Identity.Stores": "3.0.0"
+        },
         "compile": {
           "bin/placeholder/ExodusFreedomLoans.Models.dll": {}
         },
@@ -9909,6 +9912,7 @@
       "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation >= 3.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 3.0.0",
+      "Microsoft.Extensions.Identity.Stores >= 3.0.0",
       "Microsoft.Extensions.Logging.Debug >= 3.0.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.0.0"
     ]
@@ -9983,6 +9987,10 @@
             "version": "[3.0.0, )"
           },
           "Microsoft.EntityFrameworkCore.Tools": {
+            "target": "Package",
+            "version": "[3.0.0, )"
+          },
+          "Microsoft.Extensions.Identity.Stores": {
             "target": "Package",
             "version": "[3.0.0, )"
           },
