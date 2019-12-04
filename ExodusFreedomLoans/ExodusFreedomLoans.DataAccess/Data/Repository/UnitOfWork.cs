@@ -13,6 +13,7 @@ namespace ExodusFreedomLoans.DataAccess.Data.Repository
         {
             _db = db;
             Applicant = new ApplicantRepository(_db);
+            ExpenseReport = new ExpenseRepository(_db);
         }
 
         public IApplicantRepository Applicant { get; private set; }

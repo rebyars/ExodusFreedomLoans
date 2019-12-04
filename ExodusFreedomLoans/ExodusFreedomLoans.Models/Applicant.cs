@@ -51,7 +51,7 @@ namespace ExodusFreedomLoans.Models
         [Display(Name="Rent Or Own")]
         public int ApplicantHousingType { get; set; }
 
-
+        /*
         [Required]
         [Display(Name = ("Street Address"))]
         public string PrevApplicantStreetAddress { get; set; } 
@@ -70,10 +70,11 @@ namespace ExodusFreedomLoans.Models
         [MaxLength(5)]
         public string PrevApplicantZipCode { get; set; }
 
+        
         [Required]
         [Display(Name = "Rent Or Own")]
         public int PrevApplicantHousingType { get; set; }
-
+        */
 
         [Display(Name = "Current Employer Name")]
         public string EmployerName { get; set; }
@@ -122,6 +123,7 @@ namespace ExodusFreedomLoans.Models
         [Display(Name = "Monthly Income")]
         public string ApplicantMonthlyIncome { get; set; }
 
+        /*
         [Display(Name = "Previous Employer")]
         public string PrevEmployerName { get; set; }
 
@@ -168,6 +170,7 @@ namespace ExodusFreedomLoans.Models
 
         [Display(Name = "Previous Monthly Income")]
         public string PrevApplicantMonthlyIncome { get; set; }
+        */
 
         [Required]
         [Display(Name = "Nearest Relative Name")]
@@ -200,9 +203,9 @@ namespace ExodusFreedomLoans.Models
         [Display(Name = "Nearest Relative Relation to Applicant")]
         public string NearestRelativeRelation{ get; set; }
 
-        private Loan[] listOfLoans;
+       /* private Loan[] listOfLoans;
 
-        /* insert partner key */
+        insert partner key */
 
         [Required]
         public int ExpenseSheetId { get; set; }
@@ -210,6 +213,7 @@ namespace ExodusFreedomLoans.Models
         [ForeignKey("ExpenseSheetId")]
         public ExpenseReport ExpenseReport { get; set; }
 
+        /*
         public Loan[] GetListOfLoans()
         {
             return listOfLoans;
@@ -219,6 +223,6 @@ namespace ExodusFreedomLoans.Models
         public void SetListOfLoans(Loan[] value)
         {
             listOfLoans = value;
-        }
+        }*/
     }
 }

@@ -19,37 +19,6 @@ namespace ExodusFreedomLoans.DataAccess.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("ExodusFreedomLoans.Models.Address", b =>
-                {
-                    b.Property<int>("AddressId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("City")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("HousingType")
-                        .HasColumnType("int");
-
-                    b.Property<string>("State")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("StreetAddress")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ZipCode")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("AddressId");
-
-                    b.ToTable("Address");
-                });
-
             modelBuilder.Entity("ExodusFreedomLoans.Models.Applicant", b =>
                 {
                     b.Property<int>("ApplicantKey")
@@ -156,60 +125,6 @@ namespace ExodusFreedomLoans.DataAccess.Migrations
 
                     b.Property<string>("NearestRelativeZipCode")
                         .IsRequired()
-                        .HasColumnType("nvarchar(5)")
-                        .HasMaxLength(5);
-
-                    b.Property<string>("PrevApplicantCity")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("PrevApplicantHousingType")
-                        .HasColumnType("int");
-
-                    b.Property<string>("PrevApplicantMonthlyIncome")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("PrevApplicantPayStructure")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("PrevApplicantPosition")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PrevApplicantState")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PrevApplicantStreetAddress")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PrevApplicantZipCode")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(5)")
-                        .HasMaxLength(5);
-
-                    b.Property<string>("PrevEmployerCity")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PrevEmployerEmail")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PrevEmployerName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PrevEmployerPhone")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PrevEmployerState")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PrevEmployerStreetAddress")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("PrevEmployerTenure")
-                        .HasColumnType("int");
-
-                    b.Property<string>("PrevEmployerZipCode")
                         .HasColumnType("nvarchar(5)")
                         .HasMaxLength(5);
 

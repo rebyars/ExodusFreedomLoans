@@ -101,6 +101,16 @@
                 <span asp-validation-for="Applicant.ApplicantZipCode" class="text-danger"></span>
             </div>
         </div>
+        <div class="form-group row">
+            <div class="col-4">
+                <label asp-for="Applicant.ApplicantHousingType"></label>
+            </div>
+            <div class="col-8">
+                <input asp-for="Applicant.ApplicantHousingType" class="form-control" />
+                <span asp-validation-for="Applicant.ApplicantHousingType" class="text-danger"></span>
+            </div>
+        </div>
+
 
         <!-- Housing Type and Tenure NEEDED-->
 
@@ -287,6 +297,15 @@
             <div class="col-8">
                 <input asp-for="Applicant.NearestRelativeName" class="form-control" />
                 <span asp-validation-for="Applicant.NearestRelativeName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-4">
+                <label asp-for="Applicant.NearestRelativePhone"></label>
+            </div>
+            <div class="col-8">
+                <input asp-for="Applicant.NearestRelativePhone" class="form-control" />
+                <span asp-validation-for="Applicant.NearestRelativePhone" class="text-danger"></span>
             </div>
         </div>
 
@@ -584,8 +603,8 @@
                 <label asp-for="ExpenseReport.AlimonyIncome" class="form-control"></label>
             </div>
             <div class="col-3">
-                <input asp-for="ExpenseReport.ChildSupportIncome" class="form-control">
-                <span asp-validation-for="ExpenseReport.OtherSupportIncome" class="text-danger"></span>
+                <input asp-for="ExpenseReport.AlimonyIncome" class="form-control">
+                <span asp-validation-for="ExpenseReport.AlimonyIncome" class="text-danger"></span>
             </div>
             <div class="col-3">
                 <label asp-for="ExpenseReport.VehicleInsuranceExpense" class="form-control"></label>
@@ -802,7 +821,7 @@
                 @if (Model.Applicant.ApplicantKey != 0)
                 {
                     //Edit button and back to list
-                    <partial name="_EditAndBackToList" model="Model.Applicant.ApplicantKey" />
+                    <partial name="_EditAndBackToList" model="Model.Applicant" />
 
                 }
                 else

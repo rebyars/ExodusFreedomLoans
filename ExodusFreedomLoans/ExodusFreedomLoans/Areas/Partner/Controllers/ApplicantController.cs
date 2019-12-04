@@ -50,17 +50,20 @@ namespace ExodusFreedomLoans.Areas.Partner.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Upsert(VMApplicant vmApplicant)
         {
+            vmApplicant.Applicant.ExpenseSheetId = vmApplicant.ExpenseReport.ExpenseReportKey;
+
             if (ModelState.IsValid)
             {
                 if(vmApplicant.Applicant.ApplicantKey == 0)
                 {
-                    _unitOfWork.Applicant.Add(vmApplicant.Applicant);
                     _unitOfWork.ExpenseReport.Add(vmApplicant.ExpenseReport);
+                    _unitOfWork.Save();
+                    _unitOfWork.Applicant.Add(vmApplicant.Applicant);
                 }
                 else
                 {
-                    _unitOfWork.Applicant.Update(vmApplicant.Applicant);
                     _unitOfWork.ExpenseReport.Update(vmApplicant.ExpenseReport);
+                    _unitOfWork.Applicant.Update(vmApplicant.Applicant);
                 }
                 _unitOfWork.Save();
                 return RedirectToAction(nameof(Index));

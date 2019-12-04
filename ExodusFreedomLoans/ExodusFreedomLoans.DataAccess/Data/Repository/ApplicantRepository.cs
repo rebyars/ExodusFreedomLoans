@@ -39,11 +39,13 @@ namespace ExodusFreedomLoans.DataAccess.Data.Repository
             objFromDb.ApplicantState = applicant.ApplicantState;
             objFromDb.ApplicantZipCode = applicant.ApplicantZipCode;
             objFromDb.ApplicantHousingType = applicant.ApplicantHousingType;
+            /*
             objFromDb.PrevApplicantStreetAddress = applicant.PrevApplicantStreetAddress;
             objFromDb.PrevApplicantCity = applicant.PrevApplicantCity;
             objFromDb.PrevApplicantState = applicant.PrevApplicantState;
             objFromDb.PrevApplicantZipCode = applicant.PrevApplicantZipCode;
             objFromDb.PrevApplicantHousingType = applicant.PrevApplicantHousingType;
+            */
             objFromDb.EmployerName = applicant.EmployerName;
             objFromDb.EmployerStreetAddress = applicant.EmployerStreetAddress;
             objFromDb.EmployerCity = applicant.EmployerCity;
@@ -55,6 +57,7 @@ namespace ExodusFreedomLoans.DataAccess.Data.Repository
             objFromDb.ApplicantPosition = applicant.ApplicantPosition;
             objFromDb.ApplicantPayStructure = applicant.ApplicantPayStructure;
             objFromDb.ApplicantMonthlyIncome = applicant.ApplicantMonthlyIncome;
+            /*
             objFromDb.PrevEmployerName = applicant.PrevEmployerName;
             objFromDb.PrevEmployerStreetAddress = applicant.PrevEmployerStreetAddress;
             objFromDb.PrevEmployerCity = applicant.PrevEmployerCity;
@@ -65,6 +68,7 @@ namespace ExodusFreedomLoans.DataAccess.Data.Repository
             objFromDb.PrevEmployerTenure = applicant.PrevEmployerTenure;
             objFromDb.PrevApplicantPosition = applicant.PrevApplicantPosition;
             objFromDb.PrevApplicantPayStructure = applicant.PrevApplicantPayStructure;
+            */
             objFromDb.NearestRelativeName = applicant.NearestRelativeName;
             objFromDb.NearestRelativeStreetAddress = applicant.NearestRelativeStreetAddress;
             objFromDb.NearestRelativeCity = applicant.NearestRelativeCity;
@@ -72,7 +76,10 @@ namespace ExodusFreedomLoans.DataAccess.Data.Repository
             objFromDb.NearestRelativeZipCode = applicant.NearestRelativeZipCode;
             objFromDb.NearestRelativePhone = applicant.NearestRelativePhone;
             objFromDb.NearestRelativeRelation = applicant.NearestRelativeRelation;
+            /*
             objFromDb.SetListOfLoans(applicant.GetListOfLoans());
+            */
+            objFromDb.ExpenseSheetId = applicant.ExpenseSheetId;
 
             _db.SaveChanges();
 
