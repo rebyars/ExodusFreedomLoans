@@ -3339,6 +3339,9 @@
       "ExodusFreedomLoans.Models/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.0",
+        "dependencies": {
+          "Microsoft.Extensions.Identity.Stores": "3.0.0"
+        },
         "compile": {
           "bin/placeholder/ExodusFreedomLoans.Models.dll": {}
         },

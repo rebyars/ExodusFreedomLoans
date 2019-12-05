@@ -2496,6 +2496,9 @@
         }
       },
       "ExodusFreedomLoans.Models/1.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Identity.Stores": "3.0.0"
+        },
         "runtime": {
           "ExodusFreedomLoans.Models.dll": {}
         },
