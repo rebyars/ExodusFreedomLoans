@@ -2967,6 +2967,9 @@
       "ExodusFreedomLoans.Models/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.0",
+        "dependencies": {
+          "Microsoft.Extensions.Identity.Stores": "3.0.0"
+        },
         "compile": {
           "bin/placeholder/ExodusFreedomLoans.Models.dll": {}
         },
@@ -9121,7 +9124,7 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[3.0.0, 3.0.0]"
+            "version": "[3.0.1, 3.0.1]"
           },
           {
             "name": "Microsoft.NETCore.App.Ref",
@@ -9137,7 +9140,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100-preview2-014569\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

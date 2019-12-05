@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ExodusFreedomLoans.Models
 {
-    class ExpenseReport
+    public class ExpenseReport
     {
         [Key]
         public int ExpenseReportKey { get; set; }
@@ -181,7 +181,7 @@ namespace ExodusFreedomLoans.Models
         [Required]
         [Display(Name = "Monthly Alimony / Child Support")]
         public int AlimonyChildSupportExpense { get; set; }
-
-
+        public int? ApplicantId { get; set; }
+        public virtual Applicant Applicant { get; set; }
     }
 }
