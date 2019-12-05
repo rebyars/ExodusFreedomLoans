@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ExodusFreedomLoans.DataAccess.Data.Repository
 {
-    class UnitOfWork : IUnitOfWork
+    public class UnitOfWork : IUnitOfWork
     {
         private readonly ApplicationDbContext _db;
 
@@ -16,6 +16,8 @@ namespace ExodusFreedomLoans.DataAccess.Data.Repository
         }
 
         public IApplicantRepository Applicant { get; private set; }
+
+        public IExpenseRepository ExpenseReport { get; private set; }
 
         public void Dispose()
         {

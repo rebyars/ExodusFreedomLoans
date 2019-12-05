@@ -57,8 +57,9 @@ namespace ExodusFreedomLoans.DataAccess.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("AddressForeignKey")
-                        .HasColumnType("int");
+                    b.Property<string>("ApplicantCity")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ApplicantDOB")
                         .IsRequired()
@@ -67,6 +68,9 @@ namespace ExodusFreedomLoans.DataAccess.Migrations
                     b.Property<string>("ApplicantEmail")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ApplicantHousingType")
+                        .HasColumnType("int");
 
                     b.Property<string>("ApplicantMonthlyIncome")
                         .HasColumnType("nvarchar(max)");
@@ -85,11 +89,21 @@ namespace ExodusFreedomLoans.DataAccess.Migrations
                     b.Property<string>("ApplicantPosition")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("CoApplicantForeignKey")
-                        .HasColumnType("int");
+                    b.Property<string>("ApplicantState")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("EmployerAddressForeignKey")
-                        .HasColumnType("int");
+                    b.Property<string>("ApplicantStreetAddress")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ApplicantZipCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(5)")
+                        .HasMaxLength(5);
+
+                    b.Property<string>("EmployerCity")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("EmployerEmail")
                         .HasColumnType("nvarchar(max)");
@@ -100,14 +114,25 @@ namespace ExodusFreedomLoans.DataAccess.Migrations
                     b.Property<string>("EmployerPhone")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("EmployerState")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EmployerStreetAddress")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("EmployerTenure")
                         .HasColumnType("int");
 
-                    b.Property<int>("ExpenseForeignKey")
+                    b.Property<string>("EmployerZipCode")
+                        .HasColumnType("nvarchar(5)")
+                        .HasMaxLength(5);
+
+                    b.Property<int>("ExpenseSheetId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("NearestRelativeAddressForeignKey")
-                        .HasColumnType("int");
+                    b.Property<string>("NearestRelativeCity")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NearestRelativeName")
                         .IsRequired()
@@ -121,7 +146,24 @@ namespace ExodusFreedomLoans.DataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("PrevAddressForeignKey")
+                    b.Property<string>("NearestRelativeState")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NearestRelativeStreetAddress")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NearestRelativeZipCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(5)")
+                        .HasMaxLength(5);
+
+                    b.Property<string>("PrevApplicantCity")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("PrevApplicantHousingType")
                         .HasColumnType("int");
 
                     b.Property<string>("PrevApplicantMonthlyIncome")
@@ -133,6 +175,22 @@ namespace ExodusFreedomLoans.DataAccess.Migrations
                     b.Property<string>("PrevApplicantPosition")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("PrevApplicantState")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PrevApplicantStreetAddress")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PrevApplicantZipCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(5)")
+                        .HasMaxLength(5);
+
+                    b.Property<string>("PrevEmployerCity")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("PrevEmployerEmail")
                         .HasColumnType("nvarchar(max)");
 
@@ -142,27 +200,165 @@ namespace ExodusFreedomLoans.DataAccess.Migrations
                     b.Property<string>("PrevEmployerPhone")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("PrevEmployerState")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PrevEmployerStreetAddress")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("PrevEmployerTenure")
                         .HasColumnType("int");
 
-                    b.Property<int?>("PreviousAddressForeignKey")
-                        .HasColumnType("int");
+                    b.Property<string>("PrevEmployerZipCode")
+                        .HasColumnType("nvarchar(5)")
+                        .HasMaxLength(5);
 
                     b.HasKey("ApplicantKey");
 
-                    b.HasIndex("AddressForeignKey");
-
-                    b.HasIndex("CoApplicantForeignKey");
-
-                    b.HasIndex("EmployerAddressForeignKey");
-
-                    b.HasIndex("NearestRelativeAddressForeignKey");
-
-                    b.HasIndex("PrevAddressForeignKey");
-
-                    b.HasIndex("PreviousAddressForeignKey");
+                    b.HasIndex("ExpenseSheetId");
 
                     b.ToTable("Applicant");
+                });
+
+            modelBuilder.Entity("ExodusFreedomLoans.Models.ExpenseReport", b =>
+                {
+                    b.Property<int>("ExpenseReportKey")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("AlimonyChildSupportExpense")
+                        .HasColumnType("int");
+
+                    b.Property<int>("AlimonyIncome")
+                        .HasColumnType("int");
+
+                    b.Property<int>("AltTransportationExpense")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CableExpense")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CarExpense")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ChargeAccountsExpense")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ChildSupportIncome")
+                        .HasColumnType("int");
+
+                    b.Property<int>("DebtHighExpense")
+                        .HasColumnType("int");
+
+                    b.Property<int>("DoctorExpense")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ElecGasExpense")
+                        .HasColumnType("int");
+
+                    b.Property<int>("FuelExpense")
+                        .HasColumnType("int");
+
+                    b.Property<int>("FullTimeIncome")
+                        .HasColumnType("int");
+
+                    b.Property<int>("HealthInsuranceExpense")
+                        .HasColumnType("int");
+
+                    b.Property<int>("HomeInsuranceExpense")
+                        .HasColumnType("int");
+
+                    b.Property<int>("IRAIncome")
+                        .HasColumnType("int");
+
+                    b.Property<int>("InheritanceIncome")
+                        .HasColumnType("int");
+
+                    b.Property<int>("LifeInsuranceExpense")
+                        .HasColumnType("int");
+
+                    b.Property<int>("LoanExpense")
+                        .HasColumnType("int");
+
+                    b.Property<int>("LongTermCareExpense")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MaintenanceExpense")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MedicalCareExpense")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MortgageExpense")
+                        .HasColumnType("int");
+
+                    b.Property<int>("OtherAssistanceIncome")
+                        .HasColumnType("int");
+
+                    b.Property<int>("OtherHousingExpense")
+                        .HasColumnType("int");
+
+                    b.Property<int>("OtherInsuranceExpense")
+                        .HasColumnType("int");
+
+                    b.Property<int>("OtherMonthlyIncome")
+                        .HasColumnType("int");
+
+                    b.Property<int>("OtherSupportIncome")
+                        .HasColumnType("int");
+
+                    b.Property<int>("OtherTransportationExpense")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PartTimeIncome")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PerscriptionExpense")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PersonalCareExpense")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PetExpense")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PublicHousingIncome")
+                        .HasColumnType("int");
+
+                    b.Property<int>("RetirementIncome")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SNAPIncome")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SSAIncome")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SSDisabilityIncome")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SelfEmploymentIncome")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TANFIncome")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TechnologyExpense")
+                        .HasColumnType("int");
+
+                    b.Property<int>("VehichleMaintenanceExpense")
+                        .HasColumnType("int");
+
+                    b.Property<int>("VehicleInsuranceExpense")
+                        .HasColumnType("int");
+
+                    b.Property<int>("WaterBillExpense")
+                        .HasColumnType("int");
+
+                    b.HasKey("ExpenseReportKey");
+
+                    b.ToTable("ExpenseReport");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -308,12 +504,10 @@ namespace ExodusFreedomLoans.DataAccess.Migrations
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
                     b.Property<string>("LoginProvider")
-                        .HasColumnType("nvarchar(128)")
-                        .HasMaxLength(128);
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ProviderKey")
-                        .HasColumnType("nvarchar(128)")
-                        .HasMaxLength(128);
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ProviderDisplayName")
                         .HasColumnType("nvarchar(max)");
@@ -350,12 +544,10 @@ namespace ExodusFreedomLoans.DataAccess.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("LoginProvider")
-                        .HasColumnType("nvarchar(128)")
-                        .HasMaxLength(128);
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(128)")
-                        .HasMaxLength(128);
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Value")
                         .HasColumnType("nvarchar(max)");
@@ -367,29 +559,11 @@ namespace ExodusFreedomLoans.DataAccess.Migrations
 
             modelBuilder.Entity("ExodusFreedomLoans.Models.Applicant", b =>
                 {
-                    b.HasOne("ExodusFreedomLoans.Models.Address", "ApplicantAddress")
+                    b.HasOne("ExodusFreedomLoans.Models.ExpenseReport", "ExpenseReport")
                         .WithMany()
-                        .HasForeignKey("AddressForeignKey");
-
-                    b.HasOne("ExodusFreedomLoans.Models.Applicant", "CoApplicant")
-                        .WithMany()
-                        .HasForeignKey("CoApplicantForeignKey");
-
-                    b.HasOne("ExodusFreedomLoans.Models.Address", "EmployerAddress")
-                        .WithMany()
-                        .HasForeignKey("EmployerAddressForeignKey");
-
-                    b.HasOne("ExodusFreedomLoans.Models.Address", "NearestRelativeAddress")
-                        .WithMany()
-                        .HasForeignKey("NearestRelativeAddressForeignKey");
-
-                    b.HasOne("ExodusFreedomLoans.Models.Address", "PreviousAddress")
-                        .WithMany()
-                        .HasForeignKey("PrevAddressForeignKey");
-
-                    b.HasOne("ExodusFreedomLoans.Models.Address", "PrevEmployerAddress")
-                        .WithMany()
-                        .HasForeignKey("PreviousAddressForeignKey");
+                        .HasForeignKey("ExpenseSheetId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

@@ -15,6 +15,7 @@
   <ItemGroup>
     <Folder Include="..\..\..\..\..\..\Riley%2527s PC\Documents\GitHub\ExodusFreedomLoans\ExodusFreedomLoans\ExodusFreedomLoans.DataAccess\Migrations\" />
     <Folder Include="Data\Initializer\" />
+    <Folder Include="Data\Migrations\" />
   </ItemGroup>
 
   <ItemGroup>

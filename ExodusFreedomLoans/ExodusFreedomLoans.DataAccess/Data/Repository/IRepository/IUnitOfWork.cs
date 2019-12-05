@@ -7,6 +7,9 @@ namespace ExodusFreedomLoans.DataAccess.Data.Repository.IRepository
     public interface IUnitOfWork : IDisposable
     {
         IApplicantRepository Applicant { get; }
+
+        IExpenseRepository ExpenseReport { get; }
+
         void Save();
     }
 }

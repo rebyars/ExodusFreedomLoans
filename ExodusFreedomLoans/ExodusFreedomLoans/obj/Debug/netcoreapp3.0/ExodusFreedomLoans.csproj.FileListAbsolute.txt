@@ -496,3 +496,7 @@ C:\Users\Riley's PC\Documents\GitHub\ExodusFreedomLoans\ExodusFreedomLoans\Exodu
 C:\Users\Riley's PC\Documents\GitHub\ExodusFreedomLoans\ExodusFreedomLoans\ExodusFreedomLoans\bin\Debug\netcoreapp3.0\ExodusFreedomLoans.Utility.pdb
 C:\Users\Riley's PC\Documents\GitHub\ExodusFreedomLoans\ExodusFreedomLoans\ExodusFreedomLoans\obj\Debug\netcoreapp3.0\Razor\Areas\Partner\Views\_ViewImports.cshtml.g.cs
 C:\Users\Riley's PC\Documents\GitHub\ExodusFreedomLoans\ExodusFreedomLoans\ExodusFreedomLoans\obj\Debug\netcoreapp3.0\Razor\Areas\Partner\Views\_ViewStart.cshtml.g.cs
+C:\Users\Riley's PC\Documents\GitHub\ExodusFreedomLoans\ExodusFreedomLoans\ExodusFreedomLoans\obj\Debug\netcoreapp3.0\Razor\Areas\Partner\Views\Applicant\Index.cshtml.g.cs
+C:\Users\Riley's PC\Documents\GitHub\ExodusFreedomLoans\ExodusFreedomLoans\ExodusFreedomLoans\obj\Debug\netcoreapp3.0\Razor\Areas\Partner\Views\Applicant\Upsert.cshtml.g.cs
+C:\Users\Riley's PC\Documents\GitHub\ExodusFreedomLoans\ExodusFreedomLoans\ExodusFreedomLoans\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_CreateAndBackToList.cshtml.g.cs
+C:\Users\Riley's PC\Documents\GitHub\ExodusFreedomLoans\ExodusFreedomLoans\ExodusFreedomLoans\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_EditAndBackToList.cshtml.g.cs
