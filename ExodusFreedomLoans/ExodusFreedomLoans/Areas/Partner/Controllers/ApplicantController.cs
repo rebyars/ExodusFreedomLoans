@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using ExodusFreedomLoans.DataAccess.Data.Repository.IRepository;
 using ExodusFreedomLoans.Models;
+using ExodusFreedomLoans.Utility;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ExodusFreedomLoans.Areas.Partner.Controllers
@@ -34,6 +35,7 @@ namespace ExodusFreedomLoans.Areas.Partner.Controllers
             if (id == null)
 
             {
+                vmApplicant.Applicant.ApplicationStatus = SD.Pending;
                 return View(vmApplicant);
             }
             vmApplicant.Applicant = _unitOfWork.Applicant.Get(id.GetValueOrDefault());
@@ -50,8 +52,8 @@ namespace ExodusFreedomLoans.Areas.Partner.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Upsert(VMApplicant vmApplicant)
         {
-           /* vmApplicant.Applicant.ExpenseSheetId = vmApplicant.ExpenseReport.ExpenseReportKey; */
-  
+            /* vmApplicant.Applicant.ExpenseSheetId = vmApplicant.ExpenseReport.ExpenseReportKey; */
+            
             if (ModelState.IsValid)
             {
                 if(vmApplicant.Applicant.ApplicantKey == 0)

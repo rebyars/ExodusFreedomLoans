@@ -13,7 +13,7 @@ function loadDataTable() {
         },
         "columns": [
             { "data": "applicantName", "width": "50%" },
-            { "data": "applicantName", "width": "25%" },
+            { "data": "applicationStatus", "width": "25%" },
             {
                 "data": "applicantKey",
                 "render": function (data) {

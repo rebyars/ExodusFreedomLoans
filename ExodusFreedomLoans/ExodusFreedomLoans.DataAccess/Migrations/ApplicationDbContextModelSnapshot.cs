@@ -71,6 +71,13 @@ namespace ExodusFreedomLoans.DataAccess.Migrations
                         .HasColumnType("nvarchar(5)")
                         .HasMaxLength(5);
 
+                    b.Property<string>("ApplicationStatus")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("DoReferredText")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("EmployerCity")
                         .HasColumnType("nvarchar(max)");
 
@@ -98,6 +105,9 @@ namespace ExodusFreedomLoans.DataAccess.Migrations
 
                     b.Property<int?>("ExpenseSheetId")
                         .HasColumnType("int");
+
+                    b.Property<string>("HowWhenText")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NearestRelativeCity")
                         .IsRequired()
@@ -344,6 +354,10 @@ namespace ExodusFreedomLoans.DataAccess.Migrations
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(256)")
                         .HasMaxLength(256);
@@ -395,6 +409,8 @@ namespace ExodusFreedomLoans.DataAccess.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers");
+
+                    b.HasDiscriminator<string>("Discriminator").HasValue("IdentityUser");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
@@ -475,6 +491,23 @@ namespace ExodusFreedomLoans.DataAccess.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
+                });
+
+            modelBuilder.Entity("ExodusFreedomLoans.Models.ApplicationUser", b =>
+                {
+                    b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUser");
+
+                    b.Property<string>("Company")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasDiscriminator().HasValue("ApplicationUser");
                 });
 
             modelBuilder.Entity("ExodusFreedomLoans.Models.Applicant", b =>

@@ -80,6 +80,9 @@ namespace ExodusFreedomLoans.DataAccess.Data.Repository
             objFromDb.SetListOfLoans(applicant.GetListOfLoans());
             */
             objFromDb.ExpenseSheetId = applicant.ExpenseSheetId;
+            objFromDb.HowWhenText = applicant.HowWhenText;
+            objFromDb.DoReferredText = applicant.DoReferredText;
+            objFromDb.ApplicationStatus = applicant.ApplicationStatus;
 
             _db.SaveChanges();
 
