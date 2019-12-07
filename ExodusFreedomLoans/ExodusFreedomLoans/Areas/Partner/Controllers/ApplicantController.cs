@@ -35,7 +35,7 @@ namespace ExodusFreedomLoans.Areas.Partner.Controllers
             if (id == null)
 
             {
-                vmApplicant.Applicant.ApplicationStatus = SD.Pending;
+              /*  vmApplicant.Applicant.ApplicationStatus = SD.Pending; */
                 return View(vmApplicant);
             }
             vmApplicant.Applicant = _unitOfWork.Applicant.Get(id.GetValueOrDefault());

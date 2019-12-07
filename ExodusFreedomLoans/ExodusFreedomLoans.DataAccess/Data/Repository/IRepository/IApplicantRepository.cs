@@ -11,5 +11,9 @@ namespace ExodusFreedomLoans.DataAccess.Data.Repository.IRepository
         IEnumerable<SelectListItem> GetApplicantListForDropDown();
 
         void Update(Applicant applicant);
+
+        void Accept(Applicant applicant);
+        void Decline(Applicant applicant);
+        void Reopen(Applicant applicant);
     }
 }

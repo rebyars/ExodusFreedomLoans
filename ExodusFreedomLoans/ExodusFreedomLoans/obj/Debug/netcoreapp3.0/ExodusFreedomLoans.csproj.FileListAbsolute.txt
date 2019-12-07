@@ -543,3 +543,6 @@ C:\Users\Riley's PC\Documents\GitHub\ExodusFreedomLoans\ExodusFreedomLoans\Exodu
 C:\Users\Riley's PC\Documents\GitHub\ExodusFreedomLoans\ExodusFreedomLoans\ExodusFreedomLoans\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
 C:\Users\Riley's PC\Documents\GitHub\ExodusFreedomLoans\ExodusFreedomLoans\ExodusFreedomLoans\obj\Debug\netcoreapp3.0\Razor\Areas\Admin\Views\User\Index.cshtml.g.cs
 C:\Users\Riley's PC\Documents\GitHub\ExodusFreedomLoans\ExodusFreedomLoans\ExodusFreedomLoans\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_PartnerPartial.cshtml.g.cs
+C:\Users\Riley's PC\Documents\GitHub\ExodusFreedomLoans\ExodusFreedomLoans\ExodusFreedomLoans\obj\Debug\netcoreapp3.0\Razor\Areas\Admin\Views\Applicant\Index.cshtml.g.cs
+C:\Users\Riley's PC\Documents\GitHub\ExodusFreedomLoans\ExodusFreedomLoans\ExodusFreedomLoans\obj\Debug\netcoreapp3.0\Razor\Areas\Admin\Views\Applicant\Review.cshtml.g.cs
+C:\Users\Riley's PC\Documents\GitHub\ExodusFreedomLoans\ExodusFreedomLoans\ExodusFreedomLoans\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_AcceptDeclinePartial.cshtml.g.cs
