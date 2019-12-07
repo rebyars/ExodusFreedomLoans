@@ -1,0 +1,43 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+@using  ExodusFreedomLoans.Utility;
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if (User.IsInRole(SD.Admin))
+{
+    <br />
+    <div class="border backgroundWhite">
+        <div class="row">
+            <div class="col-6">
+                <h2 class="text-primary">Pending Applicants</h2>
+            </div>
+        </div>
+
+        <br />
+        <br />
+
+        <table id="tblData" class="table table-striped table-bordered" style="width:100%">
+            <thread>
+                <tr>
+                    <th>Name</th>
+                    <th>Status</th>
+                    <th></th>
+                </tr>
+
+            </thread>
+        </table>
+    </div>
+}
+else
+{
+    <p class="text-danger">You do not have permission to access this function.</p>
+}
+
+
+@section Scripts{
+    <script src="~/js/applicantReview.js"></script>
+}
+

@@ -1,0 +1,290 @@
+﻿@model ExodusFreedomLoans.Models.VMApplicant
+@using  ExodusFreedomLoans.Utility;
+@{
+    var title = "Review Candidate";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if (User.IsInRole(SD.Admin))
+{
+    <form method="post" asp-action="review">
+        <div class="row">
+        </div>
+
+        <div class="col-12">
+            <h2 class="text-primary">@title</h2>
+        </div>
+
+        <div class="col-8">
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Applicant.ApplicantName" class="col-form-label-lg"></label>:
+                </div>
+                <div class="col-8">
+                    <p class="col-form-label-lg">@Model.Applicant.ApplicantName</p>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Applicant.ApplicantPhone" class="col-form-label-lg"></label>:
+                </div>
+                <div class="col-8">
+                    <p class="col-form-label-lg">@Model.Applicant.ApplicantPhone</p>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Applicant.ApplicantEmail" class="col-form-label-lg"></label>:
+                </div>
+                <div class="col-8">
+                    <p class="col-form-label-lg">@Model.Applicant.ApplicantEmail</p>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Applicant.ApplicantDOB" class="col-form-label-lg"></label>:
+                </div>
+                <div class="col-8">
+                    <p class="col-form-label-lg">@Model.Applicant.ApplicantDOB</p>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Applicant.ApplicantStreetAddress" class="col-form-label-lg"></label>:
+                </div>
+                <div class="col-8">
+                    <p class="col-form-label-lg">@Model.Applicant.ApplicantStreetAddress</p>
+                </div>
+            </div>
+            <!-- Applicant Address format-->
+            <div class="row">
+                <p class="text-secondary">
+                    Applicant Address
+                </p>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Applicant.ApplicantStreetAddress" class="col-form-label-lg"></label>:
+                </div>
+                <div class="col-8">
+                    <p class="col-form-label-lg">@Model.Applicant.ApplicantStreetAddress</p>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-2">
+                    <label asp-for="Applicant.ApplicantCity" class="col-form-label"></label>:
+                </div>
+                <div class="col-2">
+                    <p class="col-form-label-lg">@Model.Applicant.ApplicantCity</p>
+                </div>
+                <div class="col-2">
+                    <label asp-for="Applicant.ApplicantState" class="col-form-label"></label>:
+                </div>
+                <div class="col-2">
+                    <p class="col-form-label-lg">@Model.Applicant.ApplicantState</p>
+                </div>
+                <div class="col-2">
+                    <label asp-for="Applicant.ApplicantZipCode" class="col-form-label"></label>:
+                </div>
+                <div class="col-2">
+                    <p class="col-form-label-lg">@Model.Applicant.ApplicantZipCode</p>
+                </div>
+            </div>
+            <div class="row"></div>
+            <!-- Housing Type Logic-->
+
+            <div class="row">
+                <h3 class="text-primary">
+                    Work Information
+                </h3>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Applicant.EmployerName" class="col-form-label-lg"></label>:
+                </div>
+                <div class="col-8">
+                    <p class="col-form-label-lg">@Model.Applicant.EmployerName</p>
+                </div>
+            </div>
+            <!-- Employer Address-->
+            <div class="row">
+                <p class="text-secondary">
+                    Work Address
+                </p>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Applicant.EmployerStreetAddress" class="col-form-label-lg"></label>:
+                </div>
+                <div class="col-8">
+                    <p class="col-form-label-lg">@Model.Applicant.EmployerStreetAddress</p>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-2">
+                    <label asp-for="Applicant.EmployerCity" class="col-form-label"></label>:
+                </div>
+                <div class="col-2">
+                    <p class="col-form-label-lg">@Model.Applicant.EmployerCity</p>
+                </div>
+                <div class="col-2">
+                    <label asp-for="Applicant.EmployerState" class="col-form-label"></label>:
+                </div>
+                <div class="col-2">
+                    <p class="col-form-label-lg">@Model.Applicant.EmployerState</p>
+                </div>
+                <div class="col-2">
+                    <label asp-for="Applicant.EmployerZipCode" class="col-form-label"></label>:
+                </div>
+                <div class="col-2">
+                    <p class="col-form-label-lg">@Model.Applicant.EmployerZipCode</p>
+                </div>
+            </div>
+            <div class="row"></div>
+
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Applicant.EmployerEmail" class="col-form-label-lg"></label>:
+                </div>
+                <div class="col-8">
+                    <p class="col-form-label-lg">@Model.Applicant.EmployerEmail</p>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Applicant.EmployerPhone" class="col-form-label-lg"></label>:
+                </div>
+                <div class="col-8">
+                    <p class="col-form-label-lg">@Model.Applicant.EmployerPhone</p>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Applicant.EmployerTenure" class="col-form-label-lg"></label>:
+                </div>
+                <div class="col-8">
+                    <p class="col-form-label-lg">@Model.Applicant.EmployerTenure</p>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Applicant.ApplicantPosition" class="col-form-label-lg"></label>:
+                </div>
+                <div class="col-8">
+                    <p class="col-form-label-lg">@Model.Applicant.ApplicantPosition</p>
+                </div>
+            </div>
+
+            <!--Redo logic here as well-->
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Applicant.ApplicantPayStructure" class="col-form-label-lg"></label>:
+                </div>
+                <div class="col-8">
+                    <p class="col-form-label-lg">@Model.Applicant.ApplicantPayStructure</p>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Applicant.ApplicantMonthlyIncome" class="col-form-label-lg"></label>:
+                </div>
+                <div class="col-8">
+                    <p class="col-form-label-lg"> @Model.Applicant.ApplicantMonthlyIncome</p>
+                </div>
+            </div>
+            <div class="row"></div>
+
+            <div class="row">
+                <h3 class="text-primary">
+                    Nearest Relative
+                </h3>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Applicant.NearestRelativeName" class="col-form-label-lg"></label>:
+                </div>
+                <div class="col-8">
+                    <p class="col-form-label-lg"> @Model.Applicant.NearestRelativeName</p>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Applicant.NearestRelativePhone" class="col-form-label-lg"></label>:
+                </div>
+                <div class="col-8">
+                    <p class="col-form-label-lg"> @Model.Applicant.NearestRelativePhone</p>
+                </div>
+            </div>
+            <!--Nearest Relative Address-->
+            <div class="row">
+                <p class="text-secondary">
+                    Nearest Relative Address
+                </p>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Applicant.NearestRelativeStreetAddress" class="col-form-label-lg"></label>:
+                </div>
+                <div class="col-8">
+                    <p class="col-form-label-lg">@Model.Applicant.NearestRelativeStreetAddress</p>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-2">
+                    <label asp-for="Applicant.NearestRelativeCity" class="col-form-label"></label>:
+                </div>
+                <div class="col-2">
+                    <p class="col-form-label-lg">@Model.Applicant.NearestRelativeCity</p>
+                </div>
+                <div class="col-2">
+                    <label asp-for="Applicant.NearestRelativeState" class="col-form-label"></label>:
+                </div>
+                <div class="col-2">
+                    <p class="col-form-label-lg">@Model.Applicant.NearestRelativeState</p>
+                </div>
+                <div class="col-2">
+                    <label asp-for="Applicant.NearestRelativeZipCode" class="col-form-label"></label>:
+                </div>
+                <div class="col-2">
+                    <p class="col-form-label-lg">@Model.Applicant.NearestRelativeZipCode</p>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Applicant.NearestRelativeRelation" class="col-form-label-lg"></label>:
+                </div>
+                <div class="col-8">
+                    <p class="col-form-label-lg"> @Model.Applicant.NearestRelativeRelation</p>
+                </div>
+            </div>
+
+            <!-- Expense Report Info-->
+
+
+            <!-- Accept / Decline Info-->
+            <div class="form-group row">
+                <div class="col-8 offset-4">
+                    @if (Model.Applicant.ApplicationStatus == SD.Pending)
+                    {
+                        <partial name="_AcceptDeclinePartial" model="Model.Applicant" />
+                    }
+                    else
+                    {
+                        <a asp-action="Reopen" asp-route-id="@Model.Applicant.ApplicantKey" class="btn btn-primary form-control"><i class="far fa-envelope-open"></i> Reopen </a>
+                    }
+                </div>
+            </div>
+        </div>
+    </form>
+}
+else
+{
+    <p class="text-danger">You do not have permission to access this function.</p>
+}
+
+
+

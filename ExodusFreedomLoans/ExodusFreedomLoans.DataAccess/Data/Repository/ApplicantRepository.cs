@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using ExodusFreedomLoans.Utility;
 using System.Text;
 
 namespace ExodusFreedomLoans.DataAccess.Data.Repository
@@ -17,6 +18,20 @@ namespace ExodusFreedomLoans.DataAccess.Data.Repository
             _db = db;
         }
 
+        public void Accept(Applicant applicant)
+        {
+            var userFromDb = _db.Applicant.FirstOrDefault(u => u.ApplicantKey == applicant.ApplicantKey);
+            userFromDb.ApplicationStatus = SD.Approved;
+            _db.SaveChanges();
+        }
+
+        public void Decline(Applicant applicant)
+        {
+            var userFromDb = _db.Applicant.FirstOrDefault(u => u.ApplicantKey == applicant.ApplicantKey);
+            userFromDb.ApplicationStatus = SD.Declined;
+            _db.SaveChanges();
+        }
+
         public IEnumerable<SelectListItem> GetApplicantListForDropDown()
         {
             return _db.Applicant.Select(i => new SelectListItem()
@@ -24,6 +39,13 @@ namespace ExodusFreedomLoans.DataAccess.Data.Repository
                 Text = i.ApplicantName,
                 Value = i.ApplicantKey.ToString()
             });
+        }
+
+        public void Reopen(Applicant applicant)
+        {
+            var userFromDb = _db.Applicant.FirstOrDefault(u => u.ApplicantKey == applicant.ApplicantKey);
+            userFromDb.ApplicationStatus = SD.Pending;
+            _db.SaveChanges();
         }
 
         public void Update(Applicant applicant)
@@ -80,6 +102,9 @@ namespace ExodusFreedomLoans.DataAccess.Data.Repository
             objFromDb.SetListOfLoans(applicant.GetListOfLoans());
             */
             objFromDb.ExpenseSheetId = applicant.ExpenseSheetId;
+            objFromDb.HowWhenText = applicant.HowWhenText;
+            objFromDb.DoReferredText = applicant.DoReferredText;
+            objFromDb.ApplicationStatus = applicant.ApplicationStatus;
 
             _db.SaveChanges();
 

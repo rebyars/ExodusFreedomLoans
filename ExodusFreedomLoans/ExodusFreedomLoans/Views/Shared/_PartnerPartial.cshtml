@@ -1,0 +1,33 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+@using ExodusFreedomLoans.Utility;
+
+@if (SignInManager.IsSignedIn(User))
+{
+    @if (@User.IsInRole(SD.Partner))
+    {
+        <li class="nav-link">
+            <a class="text-white" asp-area="Partner" asp-controller="Applicant" asp-action="Index">New Applicant</a>
+        </li>
+    }
+    else
+    @if (@User.IsInRole(SD.Admin))
+    {
+        <li></li>
+        <li class="nav-link">
+            <a class="text-white" asp-area="Admin" asp-controller="Applicant" asp-action="Index">Review Applicants</a>
+        </li>
+        <li>
+        </li>
+        <li class="nav-link">
+            <a class="text-white" asp-area="Admin" asp-controller="User" asp-action="Index">Edit Users</a>
+        </li>
+    }
+    else
+    {
+        <li>
+
+        </li>
+    }
+}

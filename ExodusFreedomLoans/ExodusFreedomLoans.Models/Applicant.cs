@@ -213,6 +213,18 @@ namespace ExodusFreedomLoans.Models
         [ForeignKey("ExpenseSheetId")]
         public virtual ExpenseReport ExpenseReport { get; set; }
 
+        [Display(Name="How, when and why did the referred loan applicant(s) start using high interest loans?")]
+        public string HowWhenText { get; set; }
+
+        [Display(Name = "Do  referred loan applicant(s) have the money to repay a new loan with lower interest?")]
+        public string DoReferredText { get; set; }
+
+        [Required]
+        [Display(Name = "Application Status")]
+        public string ApplicationStatus { get; set; } = "Pending";
+
+
+
         /*
         public Loan[] GetListOfLoans()
         {

@@ -13,6 +13,10 @@ namespace ExodusFreedomLoans.Utility
         public const string Salary = "Salary";
 
         public const string Renting = "Renting";
-        public const string Own = "Own or Buying"; 
+        public const string Own = "Own or Buying";
+
+        public const string Pending = "Pending";
+        public const string Approved = "Approved";
+        public const string Declined = "Declined";
     }
 }
