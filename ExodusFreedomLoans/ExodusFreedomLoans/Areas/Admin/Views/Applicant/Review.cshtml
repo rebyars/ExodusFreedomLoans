@@ -261,11 +261,178 @@
                     <p class="col-form-label-lg"> @Model.Applicant.NearestRelativeRelation</p>
                 </div>
             </div>
+ </div>
 
             <!-- Expense Report Info-->
 
+        <div class="col-12 border-dark">
+        <table style="width: 85%">
+            <thead>
+                Expense Report Info
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Income</th>
+                    <th>Monthly Amt.</th>
+                    <th>Expenses</th>
+                    <th>Monthly Amt.</th>
+                </tr>
+                <tr>
+                    <td><label asp-for="@Model.ExpenseReport.FullTimeIncome"></label></td>
+                    <td>$ @Model.ExpenseReport.FullTimeIncome</td>
+                    <td><label asp-for="@Model.ExpenseReport.MortgageExpense"></label></td>
+                    <td>$ @Model.ExpenseReport.MortgageExpense</td>
+                </tr>
+                <tr>
+                    <td><label asp-for="@Model.ExpenseReport.PartTimeIncome"></label></td>
+                    <td>$ @Model.ExpenseReport.PartTimeIncome</td>
+                    <td><label asp-for="@Model.ExpenseReport.TechnologyExpense"></label></td>
+                    <td>$ @Model.ExpenseReport.TechnologyExpense</td>
+                </tr>
+                <tr>
+                    <td><label asp-for="@Model.ExpenseReport.SelfEmploymentIncome"></label></td>
+                    <td>$ @Model.ExpenseReport.SelfEmploymentIncome</td>
+                    <td><label asp-for="@Model.ExpenseReport.ElecGasExpense"></label></td>
+                    <td>$ @Model.ExpenseReport.ElecGasExpense</td>
+                </tr>
+                <tr>
+                    <td><label asp-for="@Model.ExpenseReport.OtherMonthlyIncome"></label></td>
+                    <td>$ @Model.ExpenseReport.OtherMonthlyIncome</td>
+                    <td><label asp-for="@Model.ExpenseReport.WaterBillExpense"></label></td>
+                    <td>$ @Model.ExpenseReport.WaterBillExpense</td>
+                </tr>
+                <tr>
+                    <td><label asp-for="@Model.ExpenseReport.RetirementIncome"></label></td>
+                    <td>$ @Model.ExpenseReport.RetirementIncome</td>
+                    <td><label asp-for="@Model.ExpenseReport.CableExpense"></label></td>
+                    <td>$ @Model.ExpenseReport.CableExpense</td>
+                </tr>
+                <tr>
+                    <td><label asp-for="@Model.ExpenseReport.SSAIncome"></label></td>
+                    <td>$ @Model.ExpenseReport.SSAIncome</td>
+                    <td><label asp-for="@Model.ExpenseReport.MaintenanceExpense"></label></td>
+                    <td>$ @Model.ExpenseReport.MaintenanceExpense</td>
+                </tr>
+                <tr>
+                    <td><label asp-for="@Model.ExpenseReport.IRAIncome"></label></td>
+                    <td>$ @Model.ExpenseReport.IRAIncome</td>
+                    <td><label asp-for="@Model.ExpenseReport.OtherHousingExpense"></label></td>
+                    <td>$ @Model.ExpenseReport.OtherHousingExpense</td>
+                </tr>
+                <tr>
+                    <td><label asp-for="@Model.ExpenseReport.InheritanceIncome"></label></td>
+                    <td>$ @Model.ExpenseReport.InheritanceIncome</td>
+                    <td><label asp-for="@Model.ExpenseReport.CarExpense"></label></td>
+                    <td>$ @Model.ExpenseReport.CarExpense</td>
+                </tr>
+                <tr>
+                    <td><label asp-for="@Model.ExpenseReport.TANFIncome"></label></td>
+                    <td>$ @Model.ExpenseReport.TANFIncome</td>
+                    <td><label asp-for="@Model.ExpenseReport.AltTransportationExpense"></label></td>
+                    <td>$ @Model.ExpenseReport.AltTransportationExpense</td>
+                </tr>
+                <tr>
+                    <td><label asp-for="@Model.ExpenseReport.SNAPIncome"></label></td>
+                    <td>$ @Model.ExpenseReport.SNAPIncome</td>
+                    <td><label asp-for="@Model.ExpenseReport.FuelExpense"></label></td>
+                    <td>$ @Model.ExpenseReport.FuelExpense</td>
+                </tr>
+                <tr>
+                    <td><label asp-for="@Model.ExpenseReport.PublicHousingIncome"></label></td>
+                    <td>$ @Model.ExpenseReport.PublicHousingIncome</td>
+                    <td><label asp-for="@Model.ExpenseReport.VehichleMaintenanceExpense"></label></td>
+                    <td>$ @Model.ExpenseReport.VehichleMaintenanceExpense</td>
+                </tr>
+                <tr>
+                    <td><label asp-for="@Model.ExpenseReport.SSDisabilityIncome"></label></td>
+                    <td>$ @Model.ExpenseReport.SSDisabilityIncome</td>
+                    <td><label asp-for="@Model.ExpenseReport.OtherTransportationExpense"></label></td>
+                    <td>$ @Model.ExpenseReport.OtherTransportationExpense</td>
+                </tr>
+                <tr>
+                    <td><label asp-for="@Model.ExpenseReport.OtherAssistanceIncome"></label></td>
+                    <td>$ @Model.ExpenseReport.OtherAssistanceIncome</td>
+                    <td><label asp-for="@Model.ExpenseReport.HomeInsuranceExpense"></label></td>
+                    <td>$ @Model.ExpenseReport.HomeInsuranceExpense</td>
+                </tr>
+                <tr>
+                    <td><label asp-for="@Model.ExpenseReport.AlimonyIncome"></label></td>
+                    <td>$ @Model.ExpenseReport.AlimonyIncome</td>
+                    <td><label asp-for="@Model.ExpenseReport.VehicleInsuranceExpense"></label></td>
+                    <td>$ @Model.ExpenseReport.VehicleInsuranceExpense</td>
+                </tr>
+                <tr>
+                    <td><label asp-for="@Model.ExpenseReport.ChildSupportIncome"></label></td>
+                    <td>$ @Model.ExpenseReport.ChildSupportIncome</td>
+                    <td><label asp-for="@Model.ExpenseReport.HealthInsuranceExpense"></label></td>
+                    <td>$ @Model.ExpenseReport.HealthInsuranceExpense</td>
+                </tr>
+                <tr>
+                    <td><label asp-for="@Model.ExpenseReport.OtherSupportIncome"></label></td>
+                    <td>$ @Model.ExpenseReport.OtherSupportIncome</td>
+                    <td><label asp-for="@Model.ExpenseReport.LifeInsuranceExpense"></label></td>
+                    <td>$ @Model.ExpenseReport.LifeInsuranceExpense</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td><label asp-for="@Model.ExpenseReport.LongTermCareExpense"></label></td>
+                    <td>$ @Model.ExpenseReport.LongTermCareExpense</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td><label asp-for="@Model.ExpenseReport.OtherInsuranceExpense"></label></td>
+                    <td>$ @Model.ExpenseReport.OtherInsuranceExpense</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td><label asp-for="@Model.ExpenseReport.PetExpense"></label></td>
+                    <td>$ @Model.ExpenseReport.PetExpense</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td><label asp-for="@Model.ExpenseReport.DoctorExpense"></label></td>
+                    <td>$ @Model.ExpenseReport.DoctorExpense</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td><label asp-for="@Model.ExpenseReport.PerscriptionExpense"></label></td>
+                    <td>$ @Model.ExpenseReport.PerscriptionExpense</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td><label asp-for="@Model.ExpenseReport.PersonalCareExpense"></label></td>
+                    <td>$ @Model.ExpenseReport.PersonalCareExpense</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td><label asp-for="@Model.ExpenseReport.ChargeAccountsExpense"></label></td>
+                    <td>$ @Model.ExpenseReport.ChargeAccountsExpense</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td><label asp-for="@Model.ExpenseReport.LoanExpense"></label></td>
+                    <td>$ @Model.ExpenseReport.LoanExpense</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td><label asp-for="@Model.ExpenseReport.DebtHighExpense"></label></td>
+                    <td>$ @Model.ExpenseReport.DebtHighExpense</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
 
             <!-- Accept / Decline Info-->
+            <div class="col-8">
             <div class="form-group row">
                 <div class="col-8 offset-4">
                     @if (Model.Applicant.ApplicationStatus == SD.Pending)
